@@ -13,9 +13,8 @@ Built with **Next.js 16** (App Router) · **Supabase** (Postgres + Auth + RLS) �
 
 ## How it works
 
-- **Problem catalog** — the 448 problems live in [`data/problems.json`](data/problems.json),
-  generated from `FINAL450.xlsx` by [`scripts/extract.py`](scripts/extract.py). It's
-  read-only reference data shipped with the app.
+- **Problem catalog** — the 448 problems live in [`data/problems.json`](data/problems.json).
+  It's read-only reference data shipped with the app.
 - **Your progress** — only per-user state (done / starred / note) is stored in the
   `progress` table in Supabase, protected by Row-Level Security so each account sees
   only its own data.
@@ -95,17 +94,6 @@ checking off problems.
 
 ---
 
-## Regenerating the catalog
-
-If `FINAL450.xlsx` changes, regenerate the JSON (requires Python 3, standard library
-only):
-
-```bash
-python scripts/extract.py
-```
-
----
-
 ## Project structure
 
 ```
@@ -130,8 +118,7 @@ lib/
   catalog.ts            # imports data/problems.json, derives topics/counts
   types.ts              # shared types
   supabase/{client,server}.ts
-data/problems.json      # generated catalog (448 problems)
-scripts/extract.py      # xlsx -> problems.json
+data/problems.json      # catalog (448 problems)
 supabase/schema.sql     # progress table + RLS
 supabase/profiles.sql   # profiles table + RLS + avatars bucket
 proxy.ts                # session refresh + route guard (Next 16 "middleware")

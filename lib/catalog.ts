@@ -1,6 +1,5 @@
-// The static problem catalog, extracted from FINAL450.xlsx by scripts/extract.py.
-// This is read-only reference data shipped with the app — only per-user progress
-// lives in the database.
+// The static problem catalog. This is read-only reference data shipped with
+// the app — only per-user progress lives in the database.
 import problemsData from "@/data/problems.json";
 import type { Problem } from "./types";
 
