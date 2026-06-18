@@ -14,7 +14,7 @@ homepage and `/login`:
 - `app/robots.ts` disallows `/profile` and `/auth/`, but not `/dashboard`
   (which redirects anonymous visitors to `/login` anyway — pure crawl-budget
   waste).
-- The 448-problem catalog (`data/problems.json`) and its 24 topics are only
+- The 448-problem catalog (`data/problems.json`) and its 15 topics are only
   ever rendered inside the authenticated dashboard.
 
 Competitors in this space (takeuforward.org, neetcode.io, GeeksforGeeks,
@@ -49,7 +49,8 @@ long-tail searches, this site needs an equivalent public surface.
 - `lib/catalog.ts` gains:
   - `problemSlug(problem)` → `` `${id}-${slugify(title)}` `` (e.g.
     `12-reverse-the-array`)
-  - `topicSlug(topic)` → `slugify(topic)` (e.g. `linked-list`)
+  - `topicSlug(topic)` → `slugify(topic)` (e.g. `LinkedList` → `linkedlist`,
+    `Searching & Sorting` → `searching-sorting`)
   - `topicBySlug`: reverse map from topic slug back to the canonical topic
     string.
 - `app/problems/[slug]/page.tsx` (new): `generateStaticParams` returns
@@ -61,10 +62,10 @@ long-tail searches, this site needs an equivalent public surface.
   for that problem today (e.g. the title was edited later), it issues a
   308 redirect to the canonical URL instead of serving a stale page, so
   existing inbound/external links never hard-break.
-- `app/topics/[topic]/page.tsx` (new): `generateStaticParams` from the 24
+- `app/topics/[topic]/page.tsx` (new): `generateStaticParams` from the 15
   topics. Renders the topic's intro copy plus the full list of problems in
   that topic, each linking to its `/problems/[slug]` page.
-- `app/topics/page.tsx` (new): index page linking to all 24 topic pages.
+- `app/topics/page.tsx` (new): index page linking to all 15 topic pages.
   Required so the new pages are reachable by a crawler following links,
   not only present in the sitemap.
 - A "Browse the 450 DSA sheet" link is added to the login page, pointing
@@ -89,13 +90,13 @@ long-tail searches, this site needs an equivalent public surface.
 - Content: a 3-5 line original intro (see Content authoring below) plus
   the full problem list for that topic.
 - `generateMetadata` targets actual search phrasing ("Array interview
-  questions", "Linked List DSA practice").
+  questions", "LinkedList DSA practice").
 - JSON-LD: `BreadcrumbList` + `ItemList` (each problem as a `ListItem`
   with `position`, `name`, `url`). Legitimate here since the page is
   genuinely a list of items.
 
 **Topics index** (`/topics`):
-- Grid/list of the 24 topics with problem counts, linking to each topic
+- Grid/list of the 15 topics with problem counts, linking to each topic
   page. `BreadcrumbList` only.
 
 ### Sitemap, robots & internal linking
@@ -104,10 +105,10 @@ long-tail searches, this site needs an equivalent public surface.
   instead of 2 hardcoded URLs:
   - `/` — priority 1
   - `/topics` — priority 0.9
-  - each `/topics/[slug]` (24) — priority 0.7
+  - each `/topics/[slug]` (15) — priority 0.7
   - each `/problems/[slug]` (448) — priority 0.6
   - `/login` — priority 0.3
-  - Total: ~474 indexable URLs, up from 2.
+  - Total: 466 indexable URLs, up from 2.
 - `app/robots.ts`: add `/dashboard` to the existing `disallow` list
   alongside `/profile` and `/auth/` (it's auth-gated and currently
   unlisted, so crawlers waste budget hitting a redirect).
@@ -118,7 +119,7 @@ long-tail searches, this site needs an equivalent public surface.
 
 ### Content authoring
 
-Topic intros (24 total) are short — 3-5 lines, naming the topic + "Final
+Topic intros (15 total) are short — 3-5 lines, naming the topic + "Final
 450 DSA sheet" (keyword + brand), describing the kind of problems covered,
 no filler. Example style:
 
@@ -134,11 +135,11 @@ site owner afterward.
 
 ### Verification
 
-- `npm run build` — confirms all ~474 static params generate without
+- `npm run build` — confirms all 466 static params generate without
   error (catches slug collisions or bad data references).
 - Local spot-check (`npm run dev`): one problem page, one topic page, the
   topics index, and the rendered `sitemap.xml` (entry count should jump
-  from 2 to ~474).
+  from 2 to 466).
 - Manually validate JSON-LD shape on one problem page and one topic page
   against the schema.org spec for `BreadcrumbList`/`ItemList`.
 - Confirm `/dashboard` is now disallowed in `robots.txt` and existing
@@ -149,8 +150,8 @@ site owner afterward.
 - **Dynamic (non-static) rendering** — rejected: no benefit, since the
   catalog has no per-request data source; static generation is strictly
   better here (zero runtime cost, CDN-cacheable).
-- **Topic pages only, no per-problem route** — rejected: drops to ~24
-  pages instead of ~472, discarding the long-tail keyword surface (each
+- **Topic pages only, no per-problem route** — rejected: drops to ~16
+  pages instead of 464, discarding the long-tail keyword surface (each
   problem title is itself a low-competition search query), which is the
   whole point of fixing the sitemap gap.
 - **Original explanation per problem (448x)** — deferred to a future
