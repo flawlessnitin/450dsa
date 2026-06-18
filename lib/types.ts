@@ -6,6 +6,8 @@ export type Problem = {
   topic: string;
   title: string;
   url: string | null;
+  leetcodeUrl?: string | null;
+  codingNinjaUrl?: string | null;
 };
 
 /** A per-user progress row as stored in Supabase. */

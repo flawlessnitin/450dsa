@@ -3,7 +3,8 @@
     "id": 1,
     "topic": "Array",
     "title": "Reverse the array",
-    "url": "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/"
+    "url": "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/",
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-string/"
   },
   {
     "id": 2,
@@ -15,19 +16,22 @@
     "id": 3,
     "topic": "Array",
     "title": "Find the \"Kth\" max and min element of an array",
-    "url": "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0"
+    "url": "https://practice.geeksforgeeks.org/problems/kth-smallest-element/0",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
   },
   {
     "id": 4,
     "topic": "Array",
     "title": "Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo",
-    "url": "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0"
+    "url": "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0",
+    "leetcodeUrl": "https://leetcode.com/problems/sort-colors/"
   },
   {
     "id": 5,
     "topic": "Array",
     "title": "Move all the negative elements to one side of the array",
-    "url": "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/"
+    "url": "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/",
+    "leetcodeUrl": "https://leetcode.com/problems/rearrange-array-elements-by-sign/"
   },
   {
     "id": 6,
@@ -39,13 +43,15 @@
     "id": 7,
     "topic": "Array",
     "title": "Write a program to cyclically rotate an array by one.",
-    "url": "https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0"
+    "url": "https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0",
+    "leetcodeUrl": "https://leetcode.com/problems/rotate-array/"
   },
   {
     "id": 8,
     "topic": "Array",
     "title": "find Largest sum contiguous Subarray [V. IMP]",
-    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0"
+    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-subarray/"
   },
   {
     "id": 9,
@@ -57,13 +63,15 @@
     "id": 10,
     "topic": "Array",
     "title": "Minimum no. of Jumps to reach end of an array",
-    "url": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0"
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0",
+    "leetcodeUrl": "https://leetcode.com/problems/jump-game-ii/"
   },
   {
     "id": 11,
     "topic": "Array",
     "title": "find duplicate in an array of N+1 Integers",
-    "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+    "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-duplicate-number/"
   },
   {
     "id": 12,
@@ -75,19 +83,22 @@
     "id": 13,
     "topic": "Array",
     "title": "Kadane's Algo [V.V.V.V.V IMP]",
-    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0"
+    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-subarray/"
   },
   {
     "id": 14,
     "topic": "Array",
     "title": "Merge Intervals",
-    "url": "https://leetcode.com/problems/merge-intervals/"
+    "url": "https://leetcode.com/problems/merge-intervals/",
+    "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/"
   },
   {
     "id": 15,
     "topic": "Array",
     "title": "Next Permutation",
-    "url": "https://leetcode.com/problems/next-permutation/"
+    "url": "https://leetcode.com/problems/next-permutation/",
+    "leetcodeUrl": "https://leetcode.com/problems/next-permutation/"
   },
   {
     "id": 16,
@@ -99,13 +110,15 @@
     "id": 17,
     "topic": "Array",
     "title": "Best time to buy and Sell stock",
-    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
   },
   {
     "id": 18,
     "topic": "Array",
     "title": "find all pairs on integer array whose sum is equal to given number",
-    "url": "https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1"
+    "url": "https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1",
+    "leetcodeUrl": "https://leetcode.com/problems/two-sum/"
   },
   {
     "id": 19,
@@ -135,13 +148,15 @@
     "id": 23,
     "topic": "Array",
     "title": "find maximum product subarray",
-    "url": "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1"
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-product-subarray/"
   },
   {
     "id": 24,
     "topic": "Array",
     "title": "Find longest coinsecutive subsequence",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence/0",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-consecutive-sequence/"
   },
   {
     "id": 25,
@@ -153,7 +168,8 @@
     "id": 26,
     "topic": "Array",
     "title": "Maximum profit by buying and selling a share atmost twice",
-    "url": "https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/"
+    "url": "https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/",
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
   },
   {
     "id": 27,
@@ -165,13 +181,15 @@
     "id": 28,
     "topic": "Array",
     "title": "Find the triplet that sum to a given value",
-    "url": "https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0"
+    "url": "https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0",
+    "leetcodeUrl": "https://leetcode.com/problems/3sum/"
   },
   {
     "id": 29,
     "topic": "Array",
     "title": "Trapping Rain water problem",
-    "url": "https://practice.geeksforgeeks.org/problems/trapping-rain-water/0"
+    "url": "https://practice.geeksforgeeks.org/problems/trapping-rain-water/0",
+    "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water/"
   },
   {
     "id": 30,
@@ -183,7 +201,8 @@
     "id": 31,
     "topic": "Array",
     "title": "Smallest Subarray with sum greater than a given value",
-    "url": "https://practice.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x/0"
+    "url": "https://practice.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x/0",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/"
   },
   {
     "id": 32,
@@ -207,25 +226,29 @@
     "id": 35,
     "topic": "Array",
     "title": "Median of 2 sorted arrays of equal size",
-    "url": "https://practice.geeksforgeeks.org/problems/find-the-median0527/1"
+    "url": "https://practice.geeksforgeeks.org/problems/find-the-median0527/1",
+    "leetcodeUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
   },
   {
     "id": 36,
     "topic": "Array",
     "title": "Median of 2 sorted arrays of different size",
-    "url": "https://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/"
+    "url": "https://www.geeksforgeeks.org/median-of-two-sorted-arrays-of-different-sizes/",
+    "leetcodeUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
   },
   {
     "id": 37,
     "topic": "Matrix",
     "title": "Spiral traversal on a Matrix",
-    "url": "https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0"
+    "url": "https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix/0",
+    "leetcodeUrl": "https://leetcode.com/problems/spiral-matrix/"
   },
   {
     "id": 38,
     "topic": "Matrix",
     "title": "Search an element in a matriix",
-    "url": "https://leetcode.com/problems/search-a-2d-matrix/"
+    "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "leetcodeUrl": "https://leetcode.com/problems/search-a-2d-matrix/"
   },
   {
     "id": 39,
@@ -249,7 +272,8 @@
     "id": 42,
     "topic": "Matrix",
     "title": "Maximum size rectangle",
-    "url": "https://practice.geeksforgeeks.org/problems/max-rectangle/1"
+    "url": "https://practice.geeksforgeeks.org/problems/max-rectangle/1",
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-rectangle/"
   },
   {
     "id": 43,
@@ -261,7 +285,8 @@
     "id": 44,
     "topic": "Matrix",
     "title": "Rotate matrix by 90 degrees",
-    "url": "https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/"
+    "url": "https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/",
+    "leetcodeUrl": "https://leetcode.com/problems/rotate-image/"
   },
   {
     "id": 45,
@@ -279,13 +304,15 @@
     "id": 47,
     "topic": "String",
     "title": "Reverse a String",
-    "url": "https://leetcode.com/problems/reverse-string/"
+    "url": "https://leetcode.com/problems/reverse-string/",
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-string/"
   },
   {
     "id": 48,
     "topic": "String",
     "title": "Check whether a String is Palindrome or not",
-    "url": "https://practice.geeksforgeeks.org/problems/palindrome-string0817/1"
+    "url": "https://practice.geeksforgeeks.org/problems/palindrome-string0817/1",
+    "leetcodeUrl": "https://leetcode.com/problems/valid-palindrome/"
   },
   {
     "id": 49,
@@ -315,13 +342,15 @@
     "id": 53,
     "topic": "String",
     "title": "Count and Say problem",
-    "url": "https://leetcode.com/problems/count-and-say/"
+    "url": "https://leetcode.com/problems/count-and-say/",
+    "leetcodeUrl": "https://leetcode.com/problems/count-and-say/"
   },
   {
     "id": 54,
     "topic": "String",
     "title": "Write a program to find the longest Palindrome in a string.[ Longest palindromic Substring]",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-substring/"
   },
   {
     "id": 55,
@@ -339,7 +368,8 @@
     "id": 57,
     "topic": "String",
     "title": "Print all the permutations of the given string",
-    "url": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0"
+    "url": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0",
+    "leetcodeUrl": "https://leetcode.com/problems/permutations/"
   },
   {
     "id": 58,
@@ -357,25 +387,29 @@
     "id": 60,
     "topic": "String",
     "title": "EDIT Distance [Very Imp]",
-    "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1"
+    "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1",
+    "leetcodeUrl": "https://leetcode.com/problems/edit-distance/"
   },
   {
     "id": 61,
     "topic": "String",
     "title": "Find next greater number with same set of digits. [Very Very IMP]",
-    "url": "https://practice.geeksforgeeks.org/problems/next-permutation/0"
+    "url": "https://practice.geeksforgeeks.org/problems/next-permutation/0",
+    "leetcodeUrl": "https://leetcode.com/problems/next-permutation/"
   },
   {
     "id": 62,
     "topic": "String",
     "title": "Balanced Parenthesis problem.[Imp]",
-    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/0"
+    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/0",
+    "leetcodeUrl": "https://leetcode.com/problems/valid-parentheses/"
   },
   {
     "id": 63,
     "topic": "String",
     "title": "Word break Problem[ Very Imp]",
-    "url": "https://practice.geeksforgeeks.org/problems/word-break/0"
+    "url": "https://practice.geeksforgeeks.org/problems/word-break/0",
+    "leetcodeUrl": "https://leetcode.com/problems/word-break/"
   },
   {
     "id": 64,
@@ -387,7 +421,8 @@
     "id": 65,
     "topic": "String",
     "title": "KMP Algo",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-happy-prefix/"
   },
   {
     "id": 66,
@@ -429,13 +464,15 @@
     "id": 72,
     "topic": "String",
     "title": "Converting Roman Numerals to Decimal",
-    "url": "https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0"
+    "url": "https://practice.geeksforgeeks.org/problems/roman-number-to-integer/0",
+    "leetcodeUrl": "https://leetcode.com/problems/roman-to-integer/"
   },
   {
     "id": 73,
     "topic": "String",
     "title": "Longest Common Prefix",
-    "url": "https://leetcode.com/problems/longest-common-prefix/"
+    "url": "https://leetcode.com/problems/longest-common-prefix/",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-common-prefix/"
   },
   {
     "id": 74,
@@ -459,25 +496,29 @@
     "id": 77,
     "topic": "String",
     "title": "Find the longest common subsequence between two strings.",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-common-subsequence/"
   },
   {
     "id": 78,
     "topic": "String",
     "title": "Program to generate all possible valid IP addresses from given  string.",
-    "url": "https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/"
+    "url": "https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/",
+    "leetcodeUrl": "https://leetcode.com/problems/restore-ip-addresses/"
   },
   {
     "id": 79,
     "topic": "String",
     "title": "Write a program tofind the smallest window that contains all characters of string itself.",
-    "url": "https://practice.geeksforgeeks.org/problems/smallest-distant-window/0"
+    "url": "https://practice.geeksforgeeks.org/problems/smallest-distant-window/0",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/"
   },
   {
     "id": 80,
     "topic": "String",
     "title": "Rearrange characters in a string such that no two adjacent are same",
-    "url": "https://practice.geeksforgeeks.org/problems/rearrange-characters/0"
+    "url": "https://practice.geeksforgeeks.org/problems/rearrange-characters/0",
+    "leetcodeUrl": "https://leetcode.com/problems/reorganize-string/"
   },
   {
     "id": 81,
@@ -495,7 +536,8 @@
     "id": 83,
     "topic": "String",
     "title": "Find the smallest window in a string containing all characters of another string",
-    "url": "https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0"
+    "url": "https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/"
   },
   {
     "id": 84,
@@ -507,7 +549,8 @@
     "id": 85,
     "topic": "String",
     "title": "String matching where one string contains wildcard characters",
-    "url": "https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0"
+    "url": "https://practice.geeksforgeeks.org/problems/wildcard-string-matching/0",
+    "leetcodeUrl": "https://leetcode.com/problems/wildcard-matching/"
   },
   {
     "id": 86,
@@ -525,7 +568,8 @@
     "id": 88,
     "topic": "String",
     "title": "Check if two given strings are isomorphic to each other",
-    "url": "https://practice.geeksforgeeks.org/problems/isomorphic-strings/0"
+    "url": "https://practice.geeksforgeeks.org/problems/isomorphic-strings/0",
+    "leetcodeUrl": "https://leetcode.com/problems/isomorphic-strings/"
   },
   {
     "id": 89,
@@ -537,7 +581,8 @@
     "id": 90,
     "topic": "Searching & Sorting",
     "title": "Find first and last positions of an element in a sorted array",
-    "url": "https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x/0"
+    "url": "https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x/0",
+    "leetcodeUrl": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
   },
   {
     "id": 91,
@@ -549,13 +594,15 @@
     "id": 92,
     "topic": "Searching & Sorting",
     "title": "Search in a rotated sorted array",
-    "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+    "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
   },
   {
     "id": 93,
     "topic": "Searching & Sorting",
     "title": "square root of an integer",
-    "url": "https://practice.geeksforgeeks.org/problems/count-squares3649/1"
+    "url": "https://practice.geeksforgeeks.org/problems/count-squares3649/1",
+    "leetcodeUrl": "https://leetcode.com/problems/sqrtx/"
   },
   {
     "id": 94,
@@ -573,13 +620,15 @@
     "id": 96,
     "topic": "Searching & Sorting",
     "title": "Find the repeating and the missing",
-    "url": "https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1"
+    "url": "https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1",
+    "leetcodeUrl": "https://leetcode.com/problems/find-the-duplicate-number/"
   },
   {
     "id": 97,
     "topic": "Searching & Sorting",
     "title": "find majority element",
-    "url": "https://practice.geeksforgeeks.org/problems/majority-element/0"
+    "url": "https://practice.geeksforgeeks.org/problems/majority-element/0",
+    "leetcodeUrl": "https://leetcode.com/problems/majority-element/"
   },
   {
     "id": 98,
@@ -591,19 +640,22 @@
     "id": 99,
     "topic": "Searching & Sorting",
     "title": "find a pair with a given difference",
-    "url": "https://practice.geeksforgeeks.org/problems/find-pair-given-difference/0"
+    "url": "https://practice.geeksforgeeks.org/problems/find-pair-given-difference/0",
+    "leetcodeUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
   },
   {
     "id": 100,
     "topic": "Searching & Sorting",
     "title": "find four elements that sum to a given value",
-    "url": "https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers/0"
+    "url": "https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers/0",
+    "leetcodeUrl": "https://leetcode.com/problems/4sum/"
   },
   {
     "id": 101,
     "topic": "Searching & Sorting",
     "title": "maximum sum such that no 2 elements are adjacent",
-    "url": "https://practice.geeksforgeeks.org/problems/stickler-theif/0"
+    "url": "https://practice.geeksforgeeks.org/problems/stickler-theif/0",
+    "leetcodeUrl": "https://leetcode.com/problems/house-robber/"
   },
   {
     "id": 102,
@@ -615,7 +667,8 @@
     "id": 103,
     "topic": "Searching & Sorting",
     "title": "merge 2 sorted arrays",
-    "url": "https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1"
+    "url": "https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1",
+    "leetcodeUrl": "https://leetcode.com/problems/merge-sorted-array/"
   },
   {
     "id": 104,
@@ -627,7 +680,8 @@
     "id": 105,
     "topic": "Searching & Sorting",
     "title": "Product array Puzzle",
-    "url": "https://practice.geeksforgeeks.org/problems/product-array-puzzle/0"
+    "url": "https://practice.geeksforgeeks.org/problems/product-array-puzzle/0",
+    "leetcodeUrl": "https://leetcode.com/problems/product-of-array-except-self/"
   },
   {
     "id": 106,
@@ -639,7 +693,8 @@
     "id": 107,
     "topic": "Searching & Sorting",
     "title": "minimum no. of swaps required to sort the array",
-    "url": "https://practice.geeksforgeeks.org/problems/minimum-swaps/1"
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-swaps/1",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-swaps-to-sort/"
   },
   {
     "id": 108,
@@ -669,7 +724,8 @@
     "id": 112,
     "topic": "Searching & Sorting",
     "title": "K-th Element of Two Sorted Arrays",
-    "url": "https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array/0"
+    "url": "https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array/0",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/"
   },
   {
     "id": 113,
@@ -753,43 +809,50 @@
     "id": 126,
     "topic": "LinkedList",
     "title": "Write a Program to reverse the Linked List. (Both Iterative and recursive)",
-    "url": "https://www.geeksforgeeks.org/reverse-a-linked-list/"
+    "url": "https://www.geeksforgeeks.org/reverse-a-linked-list/",
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-linked-list/"
   },
   {
     "id": 127,
     "topic": "LinkedList",
     "title": "Reverse a Linked List in group of Given Size. [Very Imp]",
-    "url": "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1"
+    "url": "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1",
+    "leetcodeUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
   },
   {
     "id": 128,
     "topic": "LinkedList",
     "title": "Write a program to Detect loop in a linked list.",
-    "url": "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle/"
   },
   {
     "id": 129,
     "topic": "LinkedList",
     "title": "Write a program to Delete loop in a linked list.",
-    "url": "https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle-ii/"
   },
   {
     "id": 130,
     "topic": "LinkedList",
     "title": "Find the starting point of the loop.",
-    "url": "https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/"
+    "url": "https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/",
+    "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle-ii/"
   },
   {
     "id": 131,
     "topic": "LinkedList",
     "title": "Remove Duplicates in a sorted Linked List.",
-    "url": "https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/"
   },
   {
     "id": 132,
     "topic": "LinkedList",
     "title": "Remove Duplicates in a Un-sorted Linked List.",
-    "url": "https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/"
   },
   {
     "id": 133,
@@ -807,7 +870,8 @@
     "id": 135,
     "topic": "LinkedList",
     "title": "Add two numbers represented by linked lists.",
-    "url": "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1"
+    "url": "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1",
+    "leetcodeUrl": "https://leetcode.com/problems/add-two-numbers/"
   },
   {
     "id": 136,
@@ -819,13 +883,15 @@
     "id": 137,
     "topic": "LinkedList",
     "title": "Intersection Point of two Linked Lists.",
-    "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1"
+    "url": "https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1",
+    "leetcodeUrl": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
   },
   {
     "id": 138,
     "topic": "LinkedList",
     "title": "Merge Sort For Linked lists.[Very Important]",
-    "url": "https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/sort-list/"
   },
   {
     "id": 139,
@@ -837,7 +903,8 @@
     "id": 140,
     "topic": "LinkedList",
     "title": "Find the middle Element of a linked list.",
-    "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+    "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+    "leetcodeUrl": "https://leetcode.com/problems/middle-of-the-linked-list/"
   },
   {
     "id": 141,
@@ -855,7 +922,8 @@
     "id": 143,
     "topic": "LinkedList",
     "title": "Write a Program to check whether the Singly Linked list is a palindrome or not.",
-    "url": "https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1"
+    "url": "https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1",
+    "leetcodeUrl": "https://leetcode.com/problems/palindrome-linked-list/"
   },
   {
     "id": 144,
@@ -915,7 +983,8 @@
     "id": 153,
     "topic": "LinkedList",
     "title": "Flatten a Linked List",
-    "url": "https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/"
   },
   {
     "id": 154,
@@ -927,13 +996,15 @@
     "id": 155,
     "topic": "LinkedList",
     "title": "Clone a linked list with next and random pointer",
-    "url": "https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1"
+    "url": "https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1",
+    "leetcodeUrl": "https://leetcode.com/problems/copy-list-with-random-pointer/"
   },
   {
     "id": 156,
     "topic": "LinkedList",
     "title": "Merge K sorted Linked list",
-    "url": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1"
+    "url": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1",
+    "leetcodeUrl": "https://leetcode.com/problems/merge-k-sorted-lists/"
   },
   {
     "id": 157,
@@ -945,7 +1016,8 @@
     "id": 158,
     "topic": "LinkedList",
     "title": "Delete nodes which have a greater value on right side",
-    "url": "https://practice.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1"
+    "url": "https://practice.geeksforgeeks.org/problems/delete-nodes-having-greater-value-on-right/1",
+    "leetcodeUrl": "https://leetcode.com/problems/remove-linked-list-elements/"
   },
   {
     "id": 159,
@@ -957,7 +1029,8 @@
     "id": 160,
     "topic": "LinkedList",
     "title": "Program for n’th node from the end of a Linked List",
-    "url": "https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1"
+    "url": "https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1",
+    "leetcodeUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
   },
   {
     "id": 161,
@@ -969,61 +1042,71 @@
     "id": 162,
     "topic": "Binary Trees",
     "title": "level order traversal",
-    "url": "https://practice.geeksforgeeks.org/problems/level-order-traversal/1"
+    "url": "https://practice.geeksforgeeks.org/problems/level-order-traversal/1",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
   },
   {
     "id": 163,
     "topic": "Binary Trees",
     "title": "Reverse Level Order traversal",
-    "url": "https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1"
+    "url": "https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal-ii/"
   },
   {
     "id": 164,
     "topic": "Binary Trees",
     "title": "Height of a tree",
-    "url": "https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
   },
   {
     "id": 165,
     "topic": "Binary Trees",
     "title": "Diameter of a tree",
-    "url": "https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/diameter-of-binary-tree/"
   },
   {
     "id": 166,
     "topic": "Binary Trees",
     "title": "Mirror of a tree",
-    "url": "https://www.geeksforgeeks.org/create-a-mirror-tree-from-the-given-binary-tree/"
+    "url": "https://www.geeksforgeeks.org/create-a-mirror-tree-from-the-given-binary-tree/",
+    "leetcodeUrl": "https://leetcode.com/problems/invert-binary-tree/"
   },
   {
     "id": 167,
     "topic": "Binary Trees",
     "title": "Inorder Traversal of a tree both using recursion and Iteration",
-    "url": "https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/"
+    "url": "https://www.techiedelight.com/inorder-tree-traversal-iterative-recursive/",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
   },
   {
     "id": 168,
     "topic": "Binary Trees",
     "title": "Preorder Traversal of a tree both using recursion and Iteration",
-    "url": "https://www.techiedelight.com/preorder-tree-traversal-iterative-recursive/"
+    "url": "https://www.techiedelight.com/preorder-tree-traversal-iterative-recursive/",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
   },
   {
     "id": 169,
     "topic": "Binary Trees",
     "title": "Postorder Traversal of a tree both using recursion and Iteration",
-    "url": "https://www.techiedelight.com/postorder-tree-traversal-iterative-recursive/"
+    "url": "https://www.techiedelight.com/postorder-tree-traversal-iterative-recursive/",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-postorder-traversal/"
   },
   {
     "id": 170,
     "topic": "Binary Trees",
     "title": "Left View of a tree",
-    "url": "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-right-side-view/"
   },
   {
     "id": 171,
     "topic": "Binary Trees",
     "title": "Right View of Tree",
-    "url": "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-right-side-view/"
   },
   {
     "id": 172,
@@ -1041,13 +1124,15 @@
     "id": 174,
     "topic": "Binary Trees",
     "title": "Zig-Zag traversal of a binary tree",
-    "url": "https://practice.geeksforgeeks.org/problems/zigzag-tree-traversal/1"
+    "url": "https://practice.geeksforgeeks.org/problems/zigzag-tree-traversal/1",
+    "leetcodeUrl": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/"
   },
   {
     "id": 175,
     "topic": "Binary Trees",
     "title": "Check if a tree is balanced or not",
-    "url": "https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/balanced-binary-tree/"
   },
   {
     "id": 176,
@@ -1071,7 +1156,8 @@
     "id": 179,
     "topic": "Binary Trees",
     "title": "Convert Binary tree into Doubly Linked List",
-    "url": "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1"
+    "url": "https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1",
+    "leetcodeUrl": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
   },
   {
     "id": 180,
@@ -1083,7 +1169,8 @@
     "id": 181,
     "topic": "Binary Trees",
     "title": "Construct Binary tree from Inorder and preorder traversal",
-    "url": "https://practice.geeksforgeeks.org/problems/construct-tree-1/1"
+    "url": "https://practice.geeksforgeeks.org/problems/construct-tree-1/1",
+    "leetcodeUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
   },
   {
     "id": 182,
@@ -1113,7 +1200,8 @@
     "id": 186,
     "topic": "Binary Trees",
     "title": "Check if 2 trees are mirror or not",
-    "url": "https://practice.geeksforgeeks.org/problems/check-mirror-in-n-ary-tree/0"
+    "url": "https://practice.geeksforgeeks.org/problems/check-mirror-in-n-ary-tree/0",
+    "leetcodeUrl": "https://leetcode.com/problems/symmetric-tree/"
   },
   {
     "id": 187,
@@ -1143,13 +1231,15 @@
     "id": 191,
     "topic": "Binary Trees",
     "title": "Print all \"K\" Sum paths in a Binary tree",
-    "url": "https://www.geeksforgeeks.org/print-k-sum-paths-binary-tree/"
+    "url": "https://www.geeksforgeeks.org/print-k-sum-paths-binary-tree/",
+    "leetcodeUrl": "https://leetcode.com/problems/path-sum-iii/"
   },
   {
     "id": 192,
     "topic": "Binary Trees",
     "title": "Find LCA in a Binary tree",
-    "url": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1"
+    "url": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1",
+    "leetcodeUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
   },
   {
     "id": 193,
@@ -1167,7 +1257,8 @@
     "id": 195,
     "topic": "Binary Trees",
     "title": "Find all Duplicate subtrees in a Binary tree [ IMP ]",
-    "url": "https://practice.geeksforgeeks.org/problems/duplicate-subtrees/1"
+    "url": "https://practice.geeksforgeeks.org/problems/duplicate-subtrees/1",
+    "leetcodeUrl": "https://leetcode.com/problems/find-duplicate-subtrees/"
   },
   {
     "id": 196,
@@ -1179,13 +1270,15 @@
     "id": 197,
     "topic": "Binary Search Trees",
     "title": "Fina a value in a BST",
-    "url": "https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/"
+    "url": "https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/",
+    "leetcodeUrl": "https://leetcode.com/problems/search-in-a-binary-search-tree/"
   },
   {
     "id": 198,
     "topic": "Binary Search Trees",
     "title": "Deletion of a node in a BST",
-    "url": "https://leetcode.com/problems/delete-node-in-a-bst/"
+    "url": "https://leetcode.com/problems/delete-node-in-a-bst/",
+    "leetcodeUrl": "https://leetcode.com/problems/delete-node-in-a-bst/"
   },
   {
     "id": 199,
@@ -1203,7 +1296,8 @@
     "id": 201,
     "topic": "Binary Search Trees",
     "title": "Check if a tree is a BST or not",
-    "url": "https://practice.geeksforgeeks.org/problems/check-for-bst/1"
+    "url": "https://practice.geeksforgeeks.org/problems/check-for-bst/1",
+    "leetcodeUrl": "https://leetcode.com/problems/validate-binary-search-tree/"
   },
   {
     "id": 202,
@@ -1215,13 +1309,15 @@
     "id": 203,
     "topic": "Binary Search Trees",
     "title": "Find LCA  of 2 nodes in a BST",
-    "url": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1"
+    "url": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1",
+    "leetcodeUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
   },
   {
     "id": 204,
     "topic": "Binary Search Trees",
     "title": "Construct BST from preorder traversal",
-    "url": "https://www.geeksforgeeks.org/construct-bst-from-given-preorder-traversa/"
+    "url": "https://www.geeksforgeeks.org/construct-bst-from-given-preorder-traversa/",
+    "leetcodeUrl": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/"
   },
   {
     "id": 205,
@@ -1245,13 +1341,15 @@
     "id": 208,
     "topic": "Binary Search Trees",
     "title": "Find Kth largest element in a BST",
-    "url": "https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1"
+    "url": "https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
   },
   {
     "id": 209,
     "topic": "Binary Search Trees",
     "title": "Find Kth smallest element in a BST",
-    "url": "https://practice.geeksforgeeks.org/problems/find-k-th-smallest-element-in-bst/1"
+    "url": "https://practice.geeksforgeeks.org/problems/find-k-th-smallest-element-in-bst/1",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
   },
   {
     "id": 210,
@@ -1401,7 +1499,8 @@
     "id": 234,
     "topic": "Greedy",
     "title": "Maximize array sum after K negations",
-    "url": "https://practice.geeksforgeeks.org/problems/maximize-sum-after-k-negations/0"
+    "url": "https://practice.geeksforgeeks.org/problems/maximize-sum-after-k-negations/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/"
   },
   {
     "id": 235,
@@ -1527,7 +1626,8 @@
     "id": 255,
     "topic": "BackTracking",
     "title": "Printing all solutions in N-Queen Problem",
-    "url": "https://www.geeksforgeeks.org/printing-solutions-n-queen-problem/"
+    "url": "https://www.geeksforgeeks.org/printing-solutions-n-queen-problem/",
+    "leetcodeUrl": "https://leetcode.com/problems/n-queens/"
   },
   {
     "id": 256,
@@ -1539,13 +1639,15 @@
     "id": 257,
     "topic": "BackTracking",
     "title": "Remove Invalid Parentheses",
-    "url": "https://leetcode.com/problems/remove-invalid-parentheses/"
+    "url": "https://leetcode.com/problems/remove-invalid-parentheses/",
+    "leetcodeUrl": "https://leetcode.com/problems/remove-invalid-parentheses/"
   },
   {
     "id": 258,
     "topic": "BackTracking",
     "title": "Sudoku Solver",
-    "url": "https://practice.geeksforgeeks.org/problems/solve-the-sudoku/0"
+    "url": "https://practice.geeksforgeeks.org/problems/solve-the-sudoku/0",
+    "leetcodeUrl": "https://leetcode.com/problems/sudoku-solver/"
   },
   {
     "id": 259,
@@ -1557,13 +1659,15 @@
     "id": 260,
     "topic": "BackTracking",
     "title": "Print all palindromic partitions of a string",
-    "url": "https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/"
+    "url": "https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/",
+    "leetcodeUrl": "https://leetcode.com/problems/palindrome-partitioning/"
   },
   {
     "id": 261,
     "topic": "BackTracking",
     "title": "Subset Sum Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1"
+    "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1",
+    "leetcodeUrl": "https://leetcode.com/problems/partition-equal-subset-sum/"
   },
   {
     "id": 262,
@@ -1587,7 +1691,8 @@
     "id": 265,
     "topic": "BackTracking",
     "title": "Combinational Sum",
-    "url": "https://practice.geeksforgeeks.org/problems/combination-sum/0"
+    "url": "https://practice.geeksforgeeks.org/problems/combination-sum/0",
+    "leetcodeUrl": "https://leetcode.com/problems/combination-sum/"
   },
   {
     "id": 266,
@@ -1599,7 +1704,8 @@
     "id": 267,
     "topic": "BackTracking",
     "title": "Print all permutations of a string",
-    "url": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0"
+    "url": "https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0",
+    "leetcodeUrl": "https://leetcode.com/problems/permutations/"
   },
   {
     "id": 268,
@@ -1629,7 +1735,8 @@
     "id": 272,
     "topic": "BackTracking",
     "title": "Find the K-th Permutation Sequence of first N natural numbers",
-    "url": "https://www.geeksforgeeks.org/find-the-k-th-permutation-sequence-of-first-n-natural-numbers/"
+    "url": "https://www.geeksforgeeks.org/find-the-k-th-permutation-sequence-of-first-n-natural-numbers/",
+    "leetcodeUrl": "https://leetcode.com/problems/permutation-sequence/"
   },
   {
     "id": 273,
@@ -1665,7 +1772,8 @@
     "id": 278,
     "topic": "Stacks & Queues",
     "title": "Check the expression has valid or Balanced parenthesis or not.",
-    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/0"
+    "url": "https://practice.geeksforgeeks.org/problems/parenthesis-checker/0",
+    "leetcodeUrl": "https://leetcode.com/problems/valid-parentheses/"
   },
   {
     "id": 279,
@@ -1677,13 +1785,15 @@
     "id": 280,
     "topic": "Stacks & Queues",
     "title": "Design a Stack that supports getMin() in O(1) time and O(1) extra space.",
-    "url": "https://practice.geeksforgeeks.org/problems/special-stack/1"
+    "url": "https://practice.geeksforgeeks.org/problems/special-stack/1",
+    "leetcodeUrl": "https://leetcode.com/problems/min-stack/"
   },
   {
     "id": 281,
     "topic": "Stacks & Queues",
     "title": "Find the next Greater element",
-    "url": "https://practice.geeksforgeeks.org/problems/next-larger-element/0"
+    "url": "https://practice.geeksforgeeks.org/problems/next-larger-element/0",
+    "leetcodeUrl": "https://leetcode.com/problems/next-greater-element-i/"
   },
   {
     "id": 282,
@@ -1725,19 +1835,22 @@
     "id": 288,
     "topic": "Stacks & Queues",
     "title": "Merge Overlapping Intervals",
-    "url": "https://practice.geeksforgeeks.org/problems/overlapping-intervals/0"
+    "url": "https://practice.geeksforgeeks.org/problems/overlapping-intervals/0",
+    "leetcodeUrl": "https://leetcode.com/problems/merge-intervals/"
   },
   {
     "id": 289,
     "topic": "Stacks & Queues",
     "title": "Largest rectangular Area in Histogram",
-    "url": "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/0"
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram/0",
+    "leetcodeUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
   },
   {
     "id": 290,
     "topic": "Stacks & Queues",
     "title": "Length of the Longest Valid Substring",
-    "url": "https://practice.geeksforgeeks.org/problems/valid-substring0624/1"
+    "url": "https://practice.geeksforgeeks.org/problems/valid-substring0624/1",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-valid-parentheses/"
   },
   {
     "id": 291,
@@ -1749,7 +1862,8 @@
     "id": 292,
     "topic": "Stacks & Queues",
     "title": "Implement Stack using Queue",
-    "url": "https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1"
+    "url": "https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1",
+    "leetcodeUrl": "https://leetcode.com/problems/implement-stack-using-queues/"
   },
   {
     "id": 293,
@@ -1767,7 +1881,8 @@
     "id": 295,
     "topic": "Stacks & Queues",
     "title": "Implement Queue using Stack",
-    "url": "https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1"
+    "url": "https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1",
+    "leetcodeUrl": "https://leetcode.com/problems/implement-queue-using-stacks/"
   },
   {
     "id": 296,
@@ -1785,7 +1900,8 @@
     "id": 298,
     "topic": "Stacks & Queues",
     "title": "LRU Cache Implementationa",
-    "url": "https://practice.geeksforgeeks.org/problems/lru-cache/1"
+    "url": "https://practice.geeksforgeeks.org/problems/lru-cache/1",
+    "leetcodeUrl": "https://leetcode.com/problems/lru-cache/"
   },
   {
     "id": 299,
@@ -1809,19 +1925,22 @@
     "id": 302,
     "topic": "Stacks & Queues",
     "title": "Find the first circular tour that visits all Petrol Pumps",
-    "url": "https://practice.geeksforgeeks.org/problems/circular-tour/1"
+    "url": "https://practice.geeksforgeeks.org/problems/circular-tour/1",
+    "leetcodeUrl": "https://leetcode.com/problems/gas-station/"
   },
   {
     "id": 303,
     "topic": "Stacks & Queues",
     "title": "Minimum time required to rot all oranges",
-    "url": "https://practice.geeksforgeeks.org/problems/rotten-oranges/0"
+    "url": "https://practice.geeksforgeeks.org/problems/rotten-oranges/0",
+    "leetcodeUrl": "https://leetcode.com/problems/rotting-oranges/"
   },
   {
     "id": 304,
     "topic": "Stacks & Queues",
     "title": "Distance of nearest cell having 1 in a binary matrix",
-    "url": "https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1/0"
+    "url": "https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1/0",
+    "leetcodeUrl": "https://leetcode.com/problems/01-matrix/"
   },
   {
     "id": 305,
@@ -1875,19 +1994,22 @@
     "id": 313,
     "topic": "Heap",
     "title": "Maximum of all subarrays of size k.",
-    "url": "https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/"
+    "url": "https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/",
+    "leetcodeUrl": "https://leetcode.com/problems/sliding-window-maximum/"
   },
   {
     "id": 314,
     "topic": "Heap",
     "title": "“k” largest element in an array",
-    "url": "https://practice.geeksforgeeks.org/problems/k-largest-elements4206/1"
+    "url": "https://practice.geeksforgeeks.org/problems/k-largest-elements4206/1",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
   },
   {
     "id": 315,
     "topic": "Heap",
     "title": "Kth smallest and largest element in an unsorted array",
-    "url": "https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/"
+    "url": "https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/",
+    "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
   },
   {
     "id": 316,
@@ -1911,25 +2033,29 @@
     "id": 319,
     "topic": "Heap",
     "title": "Leetcode- reorganize strings",
-    "url": "https://leetcode.com/problems/reorganize-string/"
+    "url": "https://leetcode.com/problems/reorganize-string/",
+    "leetcodeUrl": "https://leetcode.com/problems/reorganize-string/"
   },
   {
     "id": 320,
     "topic": "Heap",
     "title": "Merge “K” Sorted Linked Lists [V.IMP]",
-    "url": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1"
+    "url": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1",
+    "leetcodeUrl": "https://leetcode.com/problems/merge-k-sorted-lists/"
   },
   {
     "id": 321,
     "topic": "Heap",
     "title": "Smallest range in “K” Lists",
-    "url": "https://practice.geeksforgeeks.org/problems/find-smallest-range-containing-elements-from-k-lists/1"
+    "url": "https://practice.geeksforgeeks.org/problems/find-smallest-range-containing-elements-from-k-lists/1",
+    "leetcodeUrl": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/"
   },
   {
     "id": 322,
     "topic": "Heap",
     "title": "Median in a stream of Integers",
-    "url": "https://practice.geeksforgeeks.org/problems/find-median-in-a-stream/0"
+    "url": "https://practice.geeksforgeeks.org/problems/find-median-in-a-stream/0",
+    "leetcodeUrl": "https://leetcode.com/problems/find-median-from-data-stream/"
   },
   {
     "id": 323,
@@ -1977,7 +2103,8 @@
     "id": 330,
     "topic": "Graph",
     "title": "Implement BFS algorithm",
-    "url": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1"
+    "url": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1",
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-provinces/"
   },
   {
     "id": 331,
@@ -1989,13 +2116,15 @@
     "id": 332,
     "topic": "Graph",
     "title": "Detect Cycle in Directed Graph using BFS/DFS Algo",
-    "url": "https://www.geeksforgeeks.org/detect-cycle-in-a-graph/"
+    "url": "https://www.geeksforgeeks.org/detect-cycle-in-a-graph/",
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule-ii/"
   },
   {
     "id": 333,
     "topic": "Graph",
     "title": "Detect Cycle in UnDirected Graph using BFS/DFS Algo",
-    "url": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1"
+    "url": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1",
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-provinces/"
   },
   {
     "id": 334,
@@ -2013,25 +2142,29 @@
     "id": 336,
     "topic": "Graph",
     "title": "flood fill algo",
-    "url": "https://leetcode.com/problems/flood-fill/"
+    "url": "https://leetcode.com/problems/flood-fill/",
+    "leetcodeUrl": "https://leetcode.com/problems/flood-fill/"
   },
   {
     "id": 337,
     "topic": "Graph",
     "title": "Clone a graph",
-    "url": "https://leetcode.com/problems/clone-graph/"
+    "url": "https://leetcode.com/problems/clone-graph/",
+    "leetcodeUrl": "https://leetcode.com/problems/clone-graph/"
   },
   {
     "id": 338,
     "topic": "Graph",
     "title": "Making wired Connections",
-    "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/"
+    "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/"
   },
   {
     "id": 339,
     "topic": "Graph",
     "title": "word Ladder",
-    "url": "https://leetcode.com/problems/word-ladder/"
+    "url": "https://leetcode.com/problems/word-ladder/",
+    "leetcodeUrl": "https://leetcode.com/problems/word-ladder/"
   },
   {
     "id": 340,
@@ -2043,7 +2176,8 @@
     "id": 341,
     "topic": "Graph",
     "title": "Implement Topological Sort",
-    "url": "https://practice.geeksforgeeks.org/problems/topological-sort/1"
+    "url": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule-ii/"
   },
   {
     "id": 342,
@@ -2055,19 +2189,22 @@
     "id": 343,
     "topic": "Graph",
     "title": "Find whether it is possible to finish all tasks or not from given dependencies",
-    "url": "https://www.geeksforgeeks.org/find-whether-it-is-possible-to-finish-all-tasks-or-not-from-given-dependencies/"
+    "url": "https://www.geeksforgeeks.org/find-whether-it-is-possible-to-finish-all-tasks-or-not-from-given-dependencies/",
+    "leetcodeUrl": "https://leetcode.com/problems/course-schedule/"
   },
   {
     "id": 344,
     "topic": "Graph",
     "title": "Find the no. of Isalnds",
-    "url": "https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1"
+    "url": "https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1",
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-islands/"
   },
   {
     "id": 345,
     "topic": "Graph",
     "title": "Given a sorted Dictionary of an Alien Language, find order of characters",
-    "url": "https://practice.geeksforgeeks.org/problems/alien-dictionary/1"
+    "url": "https://practice.geeksforgeeks.org/problems/alien-dictionary/1",
+    "leetcodeUrl": "https://leetcode.com/problems/alien-dictionary/"
   },
   {
     "id": 346,
@@ -2091,7 +2228,8 @@
     "id": 349,
     "topic": "Graph",
     "title": "Implement Bellman Ford Algorithm",
-    "url": "https://practice.geeksforgeeks.org/problems/negative-weight-cycle/0"
+    "url": "https://practice.geeksforgeeks.org/problems/negative-weight-cycle/0",
+    "leetcodeUrl": "https://leetcode.com/problems/network-delay-time/"
   },
   {
     "id": 350,
@@ -2115,7 +2253,8 @@
     "id": 353,
     "topic": "Graph",
     "title": "Snake and Ladders Problem",
-    "url": "https://leetcode.com/problems/snakes-and-ladders/"
+    "url": "https://leetcode.com/problems/snakes-and-ladders/",
+    "leetcodeUrl": "https://leetcode.com/problems/snakes-and-ladders/"
   },
   {
     "id": 354,
@@ -2133,7 +2272,8 @@
     "id": 356,
     "topic": "Graph",
     "title": "Check whether a graph is Bipartite or Not",
-    "url": "https://www.geeksforgeeks.org/bipartite-graph/"
+    "url": "https://www.geeksforgeeks.org/bipartite-graph/",
+    "leetcodeUrl": "https://leetcode.com/problems/is-graph-bipartite/"
   },
   {
     "id": 357,
@@ -2157,7 +2297,8 @@
     "id": 360,
     "topic": "Graph",
     "title": "Cheapest Flights Within K Stops",
-    "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/description/"
+    "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/description/",
+    "leetcodeUrl": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
   },
   {
     "id": 361,
@@ -2271,13 +2412,15 @@
     "id": 379,
     "topic": "Dynamic Programming",
     "title": "Coin ChangeProblem",
-    "url": "https://practice.geeksforgeeks.org/problems/coin-change2448/1"
+    "url": "https://practice.geeksforgeeks.org/problems/coin-change2448/1",
+    "leetcodeUrl": "https://leetcode.com/problems/coin-change/"
   },
   {
     "id": 380,
     "topic": "Dynamic Programming",
     "title": "Knapsack Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem/0"
+    "url": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem/0",
+    "leetcodeUrl": "https://leetcode.com/problems/partition-equal-subset-sum/"
   },
   {
     "id": 381,
@@ -2307,13 +2450,15 @@
     "id": 385,
     "topic": "Dynamic Programming",
     "title": "Edit Distance",
-    "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1"
+    "url": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1",
+    "leetcodeUrl": "https://leetcode.com/problems/edit-distance/"
   },
   {
     "id": 386,
     "topic": "Dynamic Programming",
     "title": "Subset Sum Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1"
+    "url": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1",
+    "leetcodeUrl": "https://leetcode.com/problems/partition-equal-subset-sum/"
   },
   {
     "id": 387,
@@ -2349,7 +2494,8 @@
     "id": 392,
     "topic": "Dynamic Programming",
     "title": "Longest Common Subsequence",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-common-subsequence/"
   },
   {
     "id": 393,
@@ -2361,7 +2507,8 @@
     "id": 394,
     "topic": "Dynamic Programming",
     "title": "Longest Increasing Subsequence",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence/0",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-subsequence/"
   },
   {
     "id": 395,
@@ -2379,7 +2526,8 @@
     "id": 397,
     "topic": "Dynamic Programming",
     "title": "Maximum Sum Increasing Subsequence",
-    "url": "https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1"
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-sum-increasing-subsequence/"
   },
   {
     "id": 398,
@@ -2403,7 +2551,8 @@
     "id": 401,
     "topic": "Dynamic Programming",
     "title": "Egg Dropping Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle/0"
+    "url": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle/0",
+    "leetcodeUrl": "https://leetcode.com/problems/super-egg-drop/"
   },
   {
     "id": 402,
@@ -2415,7 +2564,8 @@
     "id": 403,
     "topic": "Dynamic Programming",
     "title": "Maximum size square sub-matrix with all 1s",
-    "url": "https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0"
+    "url": "https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximal-square/"
   },
   {
     "id": 404,
@@ -2427,7 +2577,8 @@
     "id": 405,
     "topic": "Dynamic Programming",
     "title": "Min Cost PathProblem",
-    "url": "https://practice.geeksforgeeks.org/problems/path-in-matrix3805/1"
+    "url": "https://practice.geeksforgeeks.org/problems/path-in-matrix3805/1",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-path-sum/"
   },
   {
     "id": 406,
@@ -2439,7 +2590,8 @@
     "id": 407,
     "topic": "Dynamic Programming",
     "title": "Minimum number of jumps to reach end",
-    "url": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0"
+    "url": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0",
+    "leetcodeUrl": "https://leetcode.com/problems/jump-game-ii/"
   },
   {
     "id": 408,
@@ -2457,7 +2609,8 @@
     "id": 410,
     "topic": "Dynamic Programming",
     "title": "Longest Common Substring",
-    "url": "https://practice.geeksforgeeks.org/problems/longest-common-substring/0"
+    "url": "https://practice.geeksforgeeks.org/problems/longest-common-substring/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/"
   },
   {
     "id": 411,
@@ -2475,7 +2628,8 @@
     "id": 413,
     "topic": "Dynamic Programming",
     "title": "LargestSum Contiguous Subarray [V>V>V>V IMP ]",
-    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0"
+    "url": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-subarray/"
   },
   {
     "id": 414,
@@ -2487,13 +2641,15 @@
     "id": 415,
     "topic": "Dynamic Programming",
     "title": "Unbounded Knapsack (Repetition of items allowed)",
-    "url": "https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1"
+    "url": "https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1",
+    "leetcodeUrl": "https://leetcode.com/problems/coin-change-2/"
   },
   {
     "id": 416,
     "topic": "Dynamic Programming",
     "title": "Word Break Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/word-break/0"
+    "url": "https://practice.geeksforgeeks.org/problems/word-break/0",
+    "leetcodeUrl": "https://leetcode.com/problems/word-break/"
   },
   {
     "id": 417,
@@ -2511,7 +2667,8 @@
     "id": 419,
     "topic": "Dynamic Programming",
     "title": "Longest Palindromic Subsequence",
-    "url": "https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/"
+    "url": "https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-subsequence/"
   },
   {
     "id": 420,
@@ -2523,7 +2680,8 @@
     "id": 421,
     "topic": "Dynamic Programming",
     "title": "Longest Palindromic Substring",
-    "url": "https://leetcode.com/problems/longest-palindromic-substring/"
+    "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-substring/"
   },
   {
     "id": 422,
@@ -2553,7 +2711,8 @@
     "id": 426,
     "topic": "Dynamic Programming",
     "title": "Maximum profit by buying and selling a share at most twice [ IMP ]",
-    "url": "https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/"
+    "url": "https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/",
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
   },
   {
     "id": 427,
@@ -2571,7 +2730,8 @@
     "id": 429,
     "topic": "Dynamic Programming",
     "title": "Palindrome PartitioningProblem",
-    "url": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1"
+    "url": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1",
+    "leetcodeUrl": "https://leetcode.com/problems/palindrome-partitioning-ii/"
   },
   {
     "id": 430,
@@ -2589,7 +2749,8 @@
     "id": 432,
     "topic": "Dynamic Programming",
     "title": "Boolean Parenthesization Problem",
-    "url": "https://practice.geeksforgeeks.org/problems/boolean-parenthesization/0"
+    "url": "https://practice.geeksforgeeks.org/problems/boolean-parenthesization/0",
+    "leetcodeUrl": "https://leetcode.com/problems/parsing-a-boolean-expression/"
   },
   {
     "id": 433,
@@ -2607,31 +2768,36 @@
     "id": 435,
     "topic": "Dynamic Programming",
     "title": "Maximum sum rectangle in a 2D matrix",
-    "url": "https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0"
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0",
+    "leetcodeUrl": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/"
   },
   {
     "id": 436,
     "topic": "Dynamic Programming",
     "title": "Maximum profit by buying and selling a share at most k times",
-    "url": "https://practice.geeksforgeeks.org/problems/maximum-profit4657/1"
+    "url": "https://practice.geeksforgeeks.org/problems/maximum-profit4657/1",
+    "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/"
   },
   {
     "id": 437,
     "topic": "Dynamic Programming",
     "title": "Find if a string is interleaved of two other strings",
-    "url": "https://practice.geeksforgeeks.org/problems/interleaved-strings/1"
+    "url": "https://practice.geeksforgeeks.org/problems/interleaved-strings/1",
+    "leetcodeUrl": "https://leetcode.com/problems/interleaving-string/"
   },
   {
     "id": 438,
     "topic": "Dynamic Programming",
     "title": "Maximum Length of Pair Chain",
-    "url": "https://leetcode.com/problems/maximum-length-of-pair-chain/"
+    "url": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+    "leetcodeUrl": "https://leetcode.com/problems/maximum-length-of-pair-chain/"
   },
   {
     "id": 439,
     "topic": "Bit Manipulation",
     "title": "Count set bits in an integer",
-    "url": "https://practice.geeksforgeeks.org/problems/set-bits0143/1"
+    "url": "https://practice.geeksforgeeks.org/problems/set-bits0143/1",
+    "leetcodeUrl": "https://leetcode.com/problems/number-of-1-bits/"
   },
   {
     "id": 440,
@@ -2643,7 +2809,8 @@
     "id": 441,
     "topic": "Bit Manipulation",
     "title": "Count number of bits to be flipped to convert A to B",
-    "url": "https://practice.geeksforgeeks.org/problems/bit-difference/0"
+    "url": "https://practice.geeksforgeeks.org/problems/bit-difference/0",
+    "leetcodeUrl": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/"
   },
   {
     "id": 442,
@@ -2655,7 +2822,8 @@
     "id": 443,
     "topic": "Bit Manipulation",
     "title": "Program to find whether a no is power of two",
-    "url": "https://practice.geeksforgeeks.org/problems/power-of-2/0"
+    "url": "https://practice.geeksforgeeks.org/problems/power-of-2/0",
+    "leetcodeUrl": "https://leetcode.com/problems/power-of-two/"
   },
   {
     "id": 444,
@@ -2673,7 +2841,8 @@
     "id": 446,
     "topic": "Bit Manipulation",
     "title": "Divide two integers without using multiplication, division and mod operator",
-    "url": "https://www.geeksforgeeks.org/divide-two-integers-without-using-multiplication-division-mod-operator/"
+    "url": "https://www.geeksforgeeks.org/divide-two-integers-without-using-multiplication-division-mod-operator/",
+    "leetcodeUrl": "https://leetcode.com/problems/divide-two-integers/"
   },
   {
     "id": 447,
@@ -2685,6 +2854,7 @@
     "id": 448,
     "topic": "Bit Manipulation",
     "title": "Power Set",
-    "url": "https://practice.geeksforgeeks.org/problems/power-set4302/1"
+    "url": "https://practice.geeksforgeeks.org/problems/power-set4302/1",
+    "leetcodeUrl": "https://leetcode.com/problems/subsets/"
   }
 ]

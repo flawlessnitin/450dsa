@@ -14,6 +14,21 @@ type Props = {
   onNoteChange: (id: number, note: string) => void;
 };
 
+/** Returns true if the fallback url is already covered by one of the platform URLs. */
+function isFallbackRedundant(problem: Problem): boolean {
+  if (!problem.url) return true;
+  const url = problem.url;
+  // If the primary url is on leetcode.com and we have a leetcodeUrl, it's redundant
+  if (problem.leetcodeUrl && url.includes("leetcode.com")) return true;
+  // If the primary url is on codingninjas/naukri and we have a codingNinjaUrl, it's redundant
+  if (
+    problem.codingNinjaUrl &&
+    (url.includes("codingninjas.com") || url.includes("naukri.com/code360"))
+  )
+    return true;
+  return false;
+}
+
 function ProblemRow({
   problem,
   done,
@@ -25,6 +40,11 @@ function ProblemRow({
 }: Props) {
   const [open, setOpen] = useState(false);
   const hasNote = note.trim().length > 0;
+
+  const hasLeetcode = !!problem.leetcodeUrl;
+  const hasCodingNinja = !!problem.codingNinjaUrl;
+  const showFallback = !!problem.url && !isFallbackRedundant(problem);
+  const hasAnyLink = showFallback || hasLeetcode || hasCodingNinja;
 
   return (
     <li className="border-t border-zinc-100 px-3 py-2 first:border-t-0 hover:bg-zinc-50/60">
@@ -65,6 +85,63 @@ function ProblemRow({
             </span>
           )}
         </div>
+
+        {/* Platform link icons */}
+        {hasAnyLink && (
+          <div className="flex flex-shrink-0 items-center gap-1">
+            {showFallback && (
+              <a
+                href={problem.url!}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GeeksforGeeks / Original"
+                className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-emerald-50"
+              >
+                <img
+                  src="/geeksforgeeks.svg"
+                  alt="GFG"
+                  width={16}
+                  height={16}
+                  className="opacity-60 transition hover:opacity-100"
+                />
+              </a>
+            )}
+            {hasLeetcode && (
+              <a
+                href={problem.leetcodeUrl!}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LeetCode"
+                className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-amber-50"
+              >
+                <img
+                  src="/leetcode.svg"
+                  alt="LeetCode"
+                  width={16}
+                  height={16}
+                  className="opacity-60 transition hover:opacity-100"
+                />
+              </a>
+            )}
+            {hasCodingNinja && (
+              <a
+                href={problem.codingNinjaUrl!}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Coding Ninjas Studio"
+                className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-orange-50"
+              >
+                <img
+                  src="/coding-ninjas.svg"
+                  alt="Coding Ninjas"
+                  width={16}
+                  height={16}
+                  className="opacity-60 transition hover:opacity-100"
+                />
+              </a>
+            )}
+          </div>
+        )}
 
         <button
           type="button"
