@@ -103,6 +103,9 @@ app/
   dashboard/page.tsx    # loads catalog + your progress + profile (SSR)
   profile/page.tsx      # edit your profile (protected)
   u/[username]/page.tsx # public profile page (opt-in)
+  problems/[slug]/page.tsx # public problem page (SEO, static)
+  topics/page.tsx       # public topics index (SEO, static)
+  topics/[topic]/page.tsx # public topic page (SEO, static)
   auth/callback/route.ts# OAuth / email-confirmation code exchange
   actions.ts            # signOut server action
 components/
@@ -116,9 +119,13 @@ components/
   Avatar.tsx            # photo or generated initials avatar
 lib/
   catalog.ts            # imports data/problems.json, derives topics/counts
+  slug.ts                # problem/topic slug helpers
+  seo.ts                 # JSON-LD (BreadcrumbList/ItemList) helpers
+  site.ts                # shared baseUrl
   types.ts              # shared types
   supabase/{client,server}.ts
 data/problems.json      # catalog (448 problems)
+data/topicContent.ts    # original intro copy for each topic page
 supabase/schema.sql     # progress table + RLS
 supabase/profiles.sql   # profiles table + RLS + avatars bucket
 proxy.ts                # session refresh + route guard (Next 16 "middleware")
