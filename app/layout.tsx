@@ -13,8 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
   title: "Final 450 — DSA Tracker",
   description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
+  keywords: ["DSA", "Data Structures", "Algorithms", "Love Babbar", "450 DSA", "Tracker", "Coding", "Interview Preparation"],
+  openGraph: {
+    title: "Final 450 — DSA Tracker",
+    description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
+    url: "/",
+    siteName: "Final 450 DSA",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Final 450 — DSA Tracker",
+    description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
+  },
 };
 
 export default function RootLayout({
