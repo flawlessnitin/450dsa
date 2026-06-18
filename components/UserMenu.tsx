@@ -6,11 +6,14 @@ import { signOut } from "@/app/actions";
 import Avatar from "./Avatar";
 
 // Avatar-only trigger in the navbar that opens a compact dropdown.
+// For guest users, renders a "Sign in" link instead.
 export default function UserMenu({
+  isGuest,
   userName,
   userEmail,
   avatarUrl,
 }: {
+  isGuest?: boolean;
   userName?: string | null;
   userEmail: string;
   avatarUrl?: string | null;
@@ -34,6 +37,17 @@ export default function UserMenu({
       document.removeEventListener("keydown", onKey);
     };
   }, [open]);
+
+  if (isGuest) {
+    return (
+      <Link
+        href="/login"
+        className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-700 active:scale-95"
+      >
+        Sign in
+      </Link>
+    );
+  }
 
   return (
     <div className="relative flex items-center" ref={ref}>

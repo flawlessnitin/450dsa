@@ -8,6 +8,7 @@ import FilterBar from "./FilterBar";
 import TopicSection from "./TopicSection";
 import ProgressBar from "./ProgressBar";
 import UserMenu from "./UserMenu";
+import SignInPrompt from "./SignInPrompt";
 
 type Entry = { done: boolean; starred: boolean; note: string };
 type ProgressMap = Record<number, Entry>;
@@ -30,12 +31,14 @@ export default function TrackerView({
   avatarUrl,
   initialProgress,
 }: {
-  userId: string;
+  userId: string | null;
   userEmail: string;
   userName?: string | null;
   avatarUrl?: string | null;
   initialProgress: ProgressRow[];
 }) {
+  const isGuest = userId === null;
+
   const supabase = useMemo(() => createClient(), []);
 
   const [progress, setProgress] = useState<ProgressMap>(() =>
@@ -48,6 +51,7 @@ export default function TrackerView({
   const [status, setStatus] = useState<StatusFilter>("all");
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [showSignInPrompt, setShowSignInPrompt] = useState(false);
 
   const noteTimers = useRef<Record<number, ReturnType<typeof setTimeout>>>({});
 
@@ -79,6 +83,7 @@ export default function TrackerView({
 
   const writeRow = useCallback(
     async (id: number, entry: Entry) => {
+      if (!userId) return;
       const { error } = await supabase.from("progress").upsert(
         {
           user_id: userId,
@@ -107,6 +112,10 @@ export default function TrackerView({
 
   const onToggleDone = useCallback(
     (id: number) => {
+      if (isGuest) {
+        setShowSignInPrompt(true);
+        return;
+      }
       const next = {
         ...(progressRef.current[id] ?? EMPTY),
         done: !(progressRef.current[id] ?? EMPTY).done,
@@ -114,11 +123,15 @@ export default function TrackerView({
       apply(id, { done: next.done });
       writeRow(id, next);
     },
-    [apply, writeRow],
+    [isGuest, apply, writeRow],
   );
 
   const onToggleStar = useCallback(
     (id: number) => {
+      if (isGuest) {
+        setShowSignInPrompt(true);
+        return;
+      }
       const next = {
         ...(progressRef.current[id] ?? EMPTY),
         starred: !(progressRef.current[id] ?? EMPTY).starred,
@@ -126,18 +139,22 @@ export default function TrackerView({
       apply(id, { starred: next.starred });
       writeRow(id, next);
     },
-    [apply, writeRow],
+    [isGuest, apply, writeRow],
   );
 
   const onNoteChange = useCallback(
     (id: number, note: string) => {
+      if (isGuest) {
+        setShowSignInPrompt(true);
+        return;
+      }
       apply(id, { note });
       clearTimeout(noteTimers.current[id]);
       noteTimers.current[id] = setTimeout(() => {
         writeRow(id, progressRef.current[id] ?? { ...EMPTY, note });
       }, 600);
     },
-    [apply, writeRow],
+    [isGuest, apply, writeRow],
   );
 
   const onToggleCollapse = useCallback((topic: string) => {
@@ -200,7 +217,12 @@ export default function TrackerView({
           <span className="text-base font-semibold tracking-tight text-zinc-900">
             Final <span className="text-indigo-600">450</span>
           </span>
-          <UserMenu userName={userName} userEmail={userEmail} avatarUrl={avatarUrl} />
+          <UserMenu
+            isGuest={isGuest}
+            userName={userName}
+            userEmail={userEmail}
+            avatarUrl={avatarUrl}
+          />
         </div>
       </header>
 
@@ -268,6 +290,10 @@ export default function TrackerView({
           )}
         </div>
       </main>
+
+      {showSignInPrompt && (
+        <SignInPrompt onClose={() => setShowSignInPrompt(false)} />
+      )}
     </div>
   );
 }

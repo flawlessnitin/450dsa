@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
 type Mode = "signin" | "signup";
@@ -29,7 +30,7 @@ export default function LoginPage() {
       if (error) {
         setError(error.message);
       } else {
-        router.push("/dashboard");
+        router.push("/");
         router.refresh();
         return;
       }
@@ -43,7 +44,7 @@ export default function LoginPage() {
         setError(error.message);
       } else if (data.session) {
         // Email confirmation disabled — we're signed in immediately.
-        router.push("/dashboard");
+        router.push("/");
         router.refresh();
         return;
       } else {
@@ -168,6 +169,15 @@ export default function LoginPage() {
             <GoogleIcon />
             Continue with Google
           </button>
+
+          <div className="mt-4 text-center">
+            <Link
+              href="/"
+              className="text-sm text-zinc-500 transition hover:text-indigo-600"
+            >
+              ← Back to problems
+            </Link>
+          </div>
         </div>
       </div>
     </main>
