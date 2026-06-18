@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Final 450 — DSA Progress Tracker
 
-## Getting Started
+A web app to track your progress through the Love Babbar **Final 450** DSA sheet.
+All 448 problems are grouped by topic, each linking to its resource (GeeksforGeeks),
+with per-problem **done** tracking, **star-for-revision**, **notes**, search/filter,
+and overall + per-topic progress bars. Your progress is stored in **Supabase** and
+syncs across every device you sign in on.
 
-First, run the development server:
+Built with **Next.js 16** (App Router) · **Supabase** (Postgres + Auth + RLS) ·
+**Tailwind CSS**.
+
+---
+
+## How it works
+
+- **Problem catalog** — the 448 problems live in [`data/problems.json`](data/problems.json),
+  generated from `FINAL450.xlsx` by [`scripts/extract.py`](scripts/extract.py). It's
+  read-only reference data shipped with the app.
+- **Your progress** — only per-user state (done / starred / note) is stored in the
+  `progress` table in Supabase, protected by Row-Level Security so each account sees
+  only its own data.
+
+---
+
+## Setup
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Create a Supabase project
+
+1. Go to [supabase.com](https://supabase.com) and create a free project.
+2. In **Project Settings → API**, copy the **Project URL** and the **publishable key**
+   (`sb_publishable_...`). The publishable key is meant to be used in the browser.
+3. Create `.env.local` (copy from `.env.example`) and fill them in:
+
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_xxx
+   ```
+
+### 3. Create the database tables
+
+In the Supabase dashboard → **SQL Editor → New query**, run each of these:
+
+1. [`supabase/schema.sql`](supabase/schema.sql) — the `progress` table, its
+   Row-Level Security policy, and an `updated_at` trigger.
+2. [`supabase/profiles.sql`](supabase/profiles.sql) — the `profiles` table
+   (private by default, opt-in public page at `/u/<username>`), its RLS policies,
+   the public solved-count function, and the public **`avatars`** storage bucket
+   used for optional profile photos. Run `schema.sql` first (profiles reuses its
+   trigger function).
+
+### 4. (Optional) Email confirmation
+
+By default Supabase requires email confirmation for email/password signups. For a
+smoother personal setup, go to **Authentication → Sign In / Providers → Email** and
+turn **"Confirm email"** off — then signups log you straight in.
+
+### 5. (Optional) Enable Google sign-in
+
+1. In the Supabase dashboard → **Authentication → Sign In / Providers → Google**,
+   enable the provider. Note the **callback URL** it shows you.
+2. In the [Google Cloud Console](https://console.cloud.google.com/), create an
+   **OAuth 2.0 Client ID** (type: Web application):
+   - **Authorized redirect URI:** the callback URL from Supabase
+     (`https://<project-ref>.supabase.co/auth/v1/callback`).
+3. Paste the Google **Client ID** and **Client Secret** back into Supabase and save.
+
+> Email/password works without this step. Skip it if you don't want Google login.
+
+### 6. Run it
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000), create an account, and start
+checking off problems.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploying to Vercel
 
-## Learn More
+1. Push this repo to GitHub and import it at [vercel.com/new](https://vercel.com/new).
+2. Add the two `NEXT_PUBLIC_SUPABASE_*` environment variables in the Vercel project
+   settings (they're baked into the build, so set them before deploying).
+3. In Supabase → **Authentication → URL Configuration**, add your Vercel URL to the
+   **Redirect URLs** (e.g. `https://your-app.vercel.app/**`).
+4. If using Google login, add `https://your-app.vercel.app` to the OAuth client's
+   authorized origins as needed.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Regenerating the catalog
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If `FINAL450.xlsx` changes, regenerate the JSON (requires Python 3, standard library
+only):
 
-## Deploy on Vercel
+```bash
+python scripts/extract.py
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+app/
+  page.tsx              # redirects to /dashboard or /login
+  login/page.tsx        # email/password + Google sign-in
+  dashboard/page.tsx    # loads catalog + your progress + profile (SSR)
+  profile/page.tsx      # edit your profile (protected)
+  u/[username]/page.tsx # public profile page (opt-in)
+  auth/callback/route.ts# OAuth / email-confirmation code exchange
+  actions.ts            # signOut server action
+components/
+  TrackerView.tsx       # client orchestrator: state, optimistic saves, filters
+  TopicSection.tsx      # collapsible per-topic group + progress
+  ProblemRow.tsx        # row: done / link / star / notes
+  NoteEditor.tsx        # per-problem notes (debounced autosave)
+  FilterBar.tsx         # search + topic + status filters
+  ProgressBar.tsx       # presentational bar
+  ProfileForm.tsx       # profile editor: fields, photo upload, publish toggle
+  Avatar.tsx            # photo or generated initials avatar
+lib/
+  catalog.ts            # imports data/problems.json, derives topics/counts
+  types.ts              # shared types
+  supabase/{client,server}.ts
+data/problems.json      # generated catalog (448 problems)
+scripts/extract.py      # xlsx -> problems.json
+supabase/schema.sql     # progress table + RLS
+supabase/profiles.sql   # profiles table + RLS + avatars bucket
+proxy.ts                # session refresh + route guard (Next 16 "middleware")
+```
