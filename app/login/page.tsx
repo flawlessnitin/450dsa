@@ -170,12 +170,18 @@ export default function LoginPage() {
             Continue with Google
           </button>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 flex items-center justify-center gap-4 text-center">
             <Link
               href="/"
               className="text-sm text-zinc-500 transition hover:text-indigo-600"
             >
               ← Back to problems
+            </Link>
+            <Link
+              href="/topics"
+              className="text-sm text-zinc-500 transition hover:text-indigo-600"
+            >
+              Browse the 450 DSA sheet
             </Link>
           </div>
         </div>
