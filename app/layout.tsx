@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
-  title: "Final 450 — DSA Tracker",
-  description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
-  keywords: ["DSA", "Data Structures", "Algorithms", "Love Babbar", "450 DSA", "Tracker", "Coding", "Interview Preparation"],
+  title: "Final 450 DSA Tracker | Master Data Structures & Algorithms",
+  description: "Master Data Structures and Algorithms with the ultimate Final 450 DSA Tracker. Curated topic-wise DSA sheet to crack coding interviews and become a DSA Ninja! 🚀",
+  keywords: ["DSA", "Data Structures", "Algorithms", "450 DSA", "Tracker", "Coding", "Interview Preparation", "DSA Ninja", "Cracker"],
   openGraph: {
-    title: "Final 450 — DSA Tracker",
-    description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
+    title: "Final 450 DSA Tracker | Master Data Structures & Algorithms",
+    description: "Master Data Structures and Algorithms with the ultimate Final 450 DSA Tracker. Curated topic-wise DSA sheet to crack coding interviews and become a DSA Ninja! 🚀",
     url: "/",
     siteName: "Final 450 DSA",
     locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Final 450 — DSA Tracker",
-    description: "Track your progress through the Love Babbar Final 450 DSA sheet.",
+    title: "Final 450 DSA Tracker | Master Data Structures & Algorithms",
+    description: "Master Data Structures and Algorithms with the ultimate Final 450 DSA Tracker. Curated topic-wise DSA sheet to crack coding interviews and become a DSA Ninja! 🚀",
   },
 };
 

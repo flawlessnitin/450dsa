@@ -1,6 +1,6 @@
 # Final 450 — DSA Progress Tracker
 
-A web app to track your progress through the Love Babbar **Final 450** DSA sheet.
+A web app to track your progress through the **Final 450** DSA sheet.
 All 448 problems are grouped by topic, each linking to its resource (GeeksforGeeks),
 with per-problem **done** tracking, **star-for-revision**, **notes**, search/filter,
 and overall + per-topic progress bars. Your progress is stored in **Supabase** and
