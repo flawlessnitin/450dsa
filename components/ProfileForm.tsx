@@ -173,10 +173,10 @@ export default function ProfileForm({
       <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
           <Link
-            href="/dashboard"
+            href="/"
             className="flex items-center gap-1.5 text-sm text-zinc-500 transition hover:text-zinc-800"
           >
-            <span aria-hidden>←</span> Dashboard
+            <span aria-hidden>←</span> Home
           </Link>
           <span className="text-base font-semibold tracking-tight text-zinc-900">
             Your profile
