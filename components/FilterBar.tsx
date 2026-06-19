@@ -19,16 +19,20 @@ export default function FilterBar({
   onStatus,
   onExpandAll,
   onCollapseAll,
+  showTopicFilter = true,
+  showExpandCollapse = true,
 }: {
   search: string;
   onSearch: (v: string) => void;
-  topic: string;
-  onTopic: (v: string) => void;
-  topics: string[];
+  topic?: string;
+  onTopic?: (v: string) => void;
+  topics?: string[];
   status: StatusFilter;
   onStatus: (v: StatusFilter) => void;
-  onExpandAll: () => void;
-  onCollapseAll: () => void;
+  onExpandAll?: () => void;
+  onCollapseAll?: () => void;
+  showTopicFilter?: boolean;
+  showExpandCollapse?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -43,18 +47,20 @@ export default function FilterBar({
           />
         </div>
 
-        <select
-          value={topic}
-          onChange={(e) => onTopic(e.target.value)}
-          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
-        >
-          <option value="all">All topics</option>
-          {topics.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
+        {showTopicFilter && (
+          <select
+            value={topic}
+            onChange={(e) => onTopic?.(e.target.value)}
+            className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-700 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+          >
+            <option value="all">All topics</option>
+            {topics?.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
+        )}
 
         <div className="flex rounded-lg bg-zinc-100 p-1 text-sm">
           {STATUSES.map((s) => (
@@ -74,22 +80,24 @@ export default function FilterBar({
         </div>
       </div>
 
-      <div className="flex items-center gap-2 text-xs text-zinc-500">
-        <button
-          type="button"
-          onClick={onExpandAll}
-          className="rounded-md px-2 py-1 transition hover:bg-zinc-100"
-        >
-          Expand all
-        </button>
-        <button
-          type="button"
-          onClick={onCollapseAll}
-          className="rounded-md px-2 py-1 transition hover:bg-zinc-100"
-        >
-          Collapse all
-        </button>
-      </div>
+      {showExpandCollapse && (
+        <div className="flex items-center gap-2 text-xs text-zinc-500">
+          <button
+            type="button"
+            onClick={onExpandAll}
+            className="rounded-md px-2 py-1 transition hover:bg-zinc-100"
+          >
+            Expand all
+          </button>
+          <button
+            type="button"
+            onClick={onCollapseAll}
+            className="rounded-md px-2 py-1 transition hover:bg-zinc-100"
+          >
+            Collapse all
+          </button>
+        </div>
+      )}
     </div>
   );
 }

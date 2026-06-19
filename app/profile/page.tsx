@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import ProfileForm from "@/components/ProfileForm";
+import SiteHeader from "@/components/SiteHeader";
 import type { Profile } from "@/lib/types";
 
 export default async function ProfilePage() {
@@ -18,10 +19,13 @@ export default async function ProfilePage() {
     .maybeSingle();
 
   return (
-    <ProfileForm
-      userId={user.id}
-      email={user.email ?? ""}
-      initial={(data as Profile | null) ?? null}
-    />
+    <>
+      <SiteHeader />
+      <ProfileForm
+        userId={user.id}
+        email={user.email ?? ""}
+        initial={(data as Profile | null) ?? null}
+      />
+    </>
   );
 }

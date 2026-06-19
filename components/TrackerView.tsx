@@ -1,14 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { problems, topics, topicCounts, totalCount } from "@/lib/catalog";
 import type { ProgressRow, StatusFilter } from "@/lib/types";
 import FilterBar from "./FilterBar";
 import TopicSection from "./TopicSection";
 import ProgressBar from "./ProgressBar";
-import UserMenu from "./UserMenu";
+import SiteHeader from "./SiteHeader";
 import SignInPrompt from "./SignInPrompt";
 
 type Entry = { done: boolean; starred: boolean; note: string };
@@ -27,15 +26,9 @@ function buildMap(rows: ProgressRow[]): ProgressMap {
 
 export default function TrackerView({
   userId,
-  userEmail,
-  userName,
-  avatarUrl,
   initialProgress,
 }: {
   userId: string | null;
-  userEmail: string;
-  userName?: string | null;
-  avatarUrl?: string | null;
   initialProgress: ProgressRow[];
 }) {
   const isGuest = userId === null;
@@ -213,27 +206,7 @@ export default function TrackerView({
 
   return (
     <div className="flex flex-1 flex-col">
-      <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-          <span className="text-base font-semibold tracking-tight text-zinc-900">
-            Final <span className="text-indigo-600">450</span>
-          </span>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/topics"
-              className="text-sm text-zinc-500 transition hover:text-indigo-600"
-            >
-              Browse Topics
-            </Link>
-            <UserMenu
-              isGuest={isGuest}
-              userName={userName}
-              userEmail={userEmail}
-              avatarUrl={avatarUrl}
-            />
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6">
         <div className="mb-6 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">

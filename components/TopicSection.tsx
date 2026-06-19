@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import type { ProblemState } from "@/lib/types";
+import { topicSlug } from "@/lib/catalog";
 import ProblemRow from "./ProblemRow";
 import ProgressBar from "./ProgressBar";
 
@@ -14,6 +16,7 @@ export default function TopicSection({
   onToggleDone,
   onToggleStar,
   onNoteChange,
+  linkToTopicPage = true,
 }: {
   topic: string;
   items: ProblemState[];
@@ -24,18 +27,41 @@ export default function TopicSection({
   onToggleDone: (id: number) => void;
   onToggleStar: (id: number) => void;
   onNoteChange: (id: number, note: string) => void;
+  /** False when this section is already embedded on that topic's own page — linking to itself is pointless. */
+  linkToTopicPage?: boolean;
 }) {
   const complete = doneCount === total;
 
   return (
     <section className="overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm">
-      <button
-        type="button"
+      <div
+        role="button"
+        tabIndex={0}
+        aria-expanded={!collapsed}
+        aria-label={`Toggle ${topic} section`}
         onClick={() => onToggleCollapse(topic)}
-        className="flex w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-zinc-50"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onToggleCollapse(topic);
+          }
+        }}
+        className="flex w-full cursor-pointer items-center gap-3 px-4 py-3 text-left transition hover:bg-zinc-50"
       >
         <Chevron open={!collapsed} />
-        <h2 className="text-sm font-semibold text-zinc-800">{topic}</h2>
+        <h2 className="text-sm font-semibold text-zinc-800">
+          {linkToTopicPage ? (
+            <Link
+              href={`/topics/${topicSlug(topic)}`}
+              onClick={(e) => e.stopPropagation()}
+              className="hover:text-indigo-600 hover:underline"
+            >
+              {topic}
+            </Link>
+          ) : (
+            topic
+          )}
+        </h2>
         <span
           className={`rounded-full px-2 py-0.5 text-xs font-medium ${
             complete
@@ -48,7 +74,7 @@ export default function TopicSection({
         <div className="ml-auto w-24 sm:w-40">
           <ProgressBar value={doneCount} total={total} />
         </div>
-      </button>
+      </div>
 
       {!collapsed && (
         <ul>

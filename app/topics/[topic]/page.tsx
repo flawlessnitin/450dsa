@@ -13,6 +13,8 @@ import { topicContent } from "@/data/topicContent";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/lib/seo";
 import { baseUrl } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
+import SiteHeader from "@/components/SiteHeader";
+import TopicTracker from "@/components/TopicTracker";
 
 type Params = { params: Promise<{ topic: string }> };
 
@@ -59,32 +61,26 @@ export default async function TopicPage({ params }: Params) {
   );
 
   return (
-    <main className="flex flex-1 items-start justify-center px-4 py-10">
-      <div className="w-full max-w-2xl">
-        <nav className="mb-4 text-xs text-zinc-500">
-          <Link href="/topics" className="hover:text-indigo-600">
-            Topics
-          </Link>
-        </nav>
+    <>
+      <SiteHeader />
+      <main className="flex flex-1 items-start justify-center px-4 py-10">
+        <div className="w-full max-w-2xl">
+          <nav className="mb-4 text-xs text-zinc-500">
+            <Link href="/topics" className="hover:text-indigo-600">
+              Topics
+            </Link>
+          </nav>
 
-        <h1 className="text-2xl font-semibold text-zinc-900">{topic}</h1>
-        <p className="mt-2 text-sm text-zinc-600">{intro}</p>
+          <h1 className="text-2xl font-semibold text-zinc-900">{topic}</h1>
+          <p className="mt-2 text-sm text-zinc-600">{intro}</p>
 
-        <ul className="mt-6 divide-y divide-zinc-200 rounded-2xl border border-zinc-200 bg-white">
-          {topicProblems.map((p) => (
-            <li key={p.id}>
-              <Link
-                href={`/problems/${problemSlug(p)}`}
-                className="block px-4 py-3 text-sm text-zinc-700 transition hover:bg-zinc-50 hover:text-indigo-600"
-              >
-                {p.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <JsonLd data={breadcrumb} />
-      <JsonLd data={itemList} />
-    </main>
+          <div className="mt-6">
+            <TopicTracker topic={topic} />
+          </div>
+        </div>
+        <JsonLd data={breadcrumb} />
+        <JsonLd data={itemList} />
+      </main>
+    </>
   );
 }

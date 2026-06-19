@@ -52,7 +52,7 @@ export async function proxy(request: NextRequest) {
   }
 
   if (user && pathname === "/login") {
-    return redirectTo("/dashboard");
+    return redirectTo("/");
   }
 
   return response;

@@ -1,7 +1,9 @@
 "use client";
 
 import { memo, useState } from "react";
+import Link from "next/link";
 import type { Problem } from "@/lib/types";
+import { problemSlug } from "@/lib/catalog";
 import NoteEditor from "./NoteEditor";
 
 type Props = {
@@ -63,27 +65,14 @@ function ProblemRow({
         </button>
 
         <div className="min-w-0 flex-1">
-          {problem.url ? (
-            <a
-              href={problem.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group inline-flex items-center gap-1 text-sm transition ${
-                done
-                  ? "text-zinc-400 line-through"
-                  : "text-zinc-700 hover:text-indigo-600"
-              }`}
-            >
-              <span className="truncate">{problem.title}</span>
-              <ExternalIcon />
-            </a>
-          ) : (
-            <span
-              className={`text-sm ${done ? "text-zinc-400 line-through" : "text-zinc-700"}`}
-            >
-              {problem.title}
-            </span>
-          )}
+          <Link
+            href={`/problems/${problemSlug(problem)}`}
+            className={`block truncate text-sm transition ${
+              done ? "text-zinc-400 line-through" : "text-zinc-700 hover:text-indigo-600"
+            }`}
+          >
+            {problem.title}
+          </Link>
         </div>
 
         {/* Platform link icons */}
@@ -178,27 +167,6 @@ function CheckIcon() {
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
       <path
         d="M2.5 6.5L5 9L9.5 3.5"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ExternalIcon() {
-  return (
-    <svg
-      width="11"
-      height="11"
-      viewBox="0 0 24 24"
-      fill="none"
-      className="flex-shrink-0 opacity-0 transition group-hover:opacity-100"
-      aria-hidden="true"
-    >
-      <path
-        d="M7 17L17 7M17 7H8M17 7V16"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"

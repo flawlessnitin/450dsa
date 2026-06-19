@@ -5,6 +5,7 @@ import { problemById, problems, problemSlug, topicSlug } from "@/lib/catalog";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { baseUrl } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
+import SiteHeader from "@/components/SiteHeader";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -66,65 +67,68 @@ export default async function ProblemPage({ params }: Params) {
   ]);
 
   return (
-    <main className="flex flex-1 items-start justify-center px-4 py-10">
-      <div className="w-full max-w-lg">
-        <nav className="mb-4 text-xs text-zinc-500">
-          <Link href="/topics" className="hover:text-indigo-600">
-            Topics
-          </Link>
-          {" / "}
-          <Link href={topicHref} className="hover:text-indigo-600">
-            {problem.topic}
-          </Link>
-        </nav>
+    <>
+      <SiteHeader />
+      <main className="flex flex-1 items-start justify-center px-4 py-10">
+        <div className="w-full max-w-lg">
+          <nav className="mb-4 text-xs text-zinc-500">
+            <Link href="/topics" className="hover:text-indigo-600">
+              Topics
+            </Link>
+            {" / "}
+            <Link href={topicHref} className="hover:text-indigo-600">
+              {problem.topic}
+            </Link>
+          </nav>
 
-        <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <p className="text-xs font-medium uppercase tracking-wide text-indigo-600">
-            {problem.topic}
-          </p>
-          <h1 className="mt-1 text-xl font-semibold text-zinc-900">{problem.title}</h1>
-
-          {links.length > 0 ? (
-            <>
-              <p className="mt-4 text-sm text-zinc-600">
-                Part of the Final 450 DSA sheet. Solve it on one of the links below, then{" "}
-                <Link href="/login" className="text-indigo-600 hover:underline">
-                  sign up to track your progress
-                </Link>
-                .
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {links.map((l) => (
-                  <a
-                    key={l.label}
-                    href={l.value}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-600 transition hover:border-indigo-300 hover:text-indigo-600"
-                  >
-                    {l.label} ↗
-                  </a>
-                ))}
-              </div>
-            </>
-          ) : (
-            <p className="mt-4 text-sm text-zinc-600">
-              This is a conceptual question with no single practice link — see the{" "}
-              <Link href={topicHref} className="text-indigo-600 hover:underline">
-                {problem.topic} topic page
-              </Link>{" "}
-              for related practice problems.
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <p className="text-xs font-medium uppercase tracking-wide text-indigo-600">
+              {problem.topic}
             </p>
-          )}
-        </div>
+            <h1 className="mt-1 text-xl font-semibold text-zinc-900">{problem.title}</h1>
 
-        <p className="mt-4 text-center text-xs text-zinc-400">
-          <Link href="/" className="hover:text-zinc-600">
-            Final 450 — DSA Tracker
-          </Link>
-        </p>
-      </div>
-      <JsonLd data={breadcrumb} />
-    </main>
+            {links.length > 0 ? (
+              <>
+                <p className="mt-4 text-sm text-zinc-600">
+                  Part of the Final 450 DSA sheet. Solve it on one of the links below, then{" "}
+                  <Link href="/login" className="text-indigo-600 hover:underline">
+                    sign up to track your progress
+                  </Link>
+                  .
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {links.map((l) => (
+                    <a
+                      key={l.label}
+                      href={l.value}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-600 transition hover:border-indigo-300 hover:text-indigo-600"
+                    >
+                      {l.label} ↗
+                    </a>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <p className="mt-4 text-sm text-zinc-600">
+                This is a conceptual question with no single practice link — see the{" "}
+                <Link href={topicHref} className="text-indigo-600 hover:underline">
+                  {problem.topic} topic page
+                </Link>{" "}
+                for related practice problems.
+              </p>
+            )}
+          </div>
+
+          <p className="mt-4 text-center text-xs text-zinc-400">
+            <Link href="/" className="hover:text-zinc-600">
+              Final 450 — DSA Tracker
+            </Link>
+          </p>
+        </div>
+        <JsonLd data={breadcrumb} />
+      </main>
+    </>
   );
 }
