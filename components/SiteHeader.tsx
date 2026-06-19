@@ -25,12 +25,19 @@ export default function SiteHeader() {
           >
             Browse Topics
           </Link>
-          <UserMenu
-            isGuest={auth.isGuest}
-            userName={auth.userName}
-            userEmail={auth.userEmail}
-            avatarUrl={auth.avatarUrl}
-          />
+          {auth.loading ? (
+            <div
+              aria-hidden="true"
+              className="h-[34px] w-[34px] animate-pulse rounded-full bg-zinc-200"
+            />
+          ) : (
+            <UserMenu
+              isGuest={auth.isGuest}
+              userName={auth.userName}
+              userEmail={auth.userEmail}
+              avatarUrl={auth.avatarUrl}
+            />
+          )}
         </div>
       </div>
     </header>

@@ -9,6 +9,10 @@ type AuthState = {
   userEmail: string;
   userName: string | null;
   avatarUrl: string | null;
+  /** True until the first session check resolves. Consumers should show a
+   * neutral placeholder while this is true, rather than rendering guest UI
+   * that then flashes to a signed-in state once the real session loads. */
+  loading: boolean;
 };
 
 const GUEST: AuthState = {
@@ -17,9 +21,12 @@ const GUEST: AuthState = {
   userEmail: "",
   userName: null,
   avatarUrl: null,
+  loading: false,
 };
 
-const AuthContext = createContext<AuthState>(GUEST);
+const LOADING: AuthState = { ...GUEST, loading: true };
+
+const AuthContext = createContext<AuthState>(LOADING);
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -30,7 +37,7 @@ export function useAuth() {
 // of every page remounting its own copy of this fetch (which is what
 // happened when this logic lived inside SiteHeader directly).
 export default function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [auth, setAuth] = useState<AuthState>(GUEST);
+  const [auth, setAuth] = useState<AuthState>(LOADING);
 
   useEffect(() => {
     const supabase = createClient();
@@ -49,6 +56,7 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
         userEmail: email,
         userName: data?.full_name ?? null,
         avatarUrl: data?.avatar_url ?? null,
+        loading: false,
       });
     }
 

@@ -29,10 +29,11 @@ function buildMap(rows: ProgressRow[]): ProgressMap {
 export default function TopicTracker({ topic }: { topic: string }) {
   const supabase = useMemo(() => createClient(), []);
   const topicProblems = useMemo(() => problemsByTopic(topic), [topic]);
-  const { userId } = useAuth();
+  const { userId, loading: authLoading } = useAuth();
 
   const [progress, setProgress] = useState<ProgressMap>({});
   const progressRef = useRef<ProgressMap>({});
+  const [progressLoaded, setProgressLoaded] = useState(false);
 
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState<StatusFilter>("all");
@@ -42,10 +43,18 @@ export default function TopicTracker({ topic }: { topic: string }) {
 
   const noteTimers = useRef<Record<number, ReturnType<typeof setTimeout>>>({});
 
-  // Auth state (and its one-time fetch) lives in AuthProvider — this effect
-  // only fires the topic's own progress fetch once that resolves a real user.
+  // Auth state (and its one-time fetch) lives in AuthProvider. Once it
+  // resolves: a guest has nothing to load (mark loaded immediately), a real
+  // user's progress is fetched here before the checkboxes are ever shown —
+  // otherwise they'd briefly render as unchecked and then flip, which reads
+  // as a bug rather than a loading state.
   useEffect(() => {
-    if (!userId) return;
+    if (authLoading) return;
+    if (!userId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setProgressLoaded(true);
+      return;
+    }
     let active = true;
 
     supabase
@@ -56,12 +65,15 @@ export default function TopicTracker({ topic }: { topic: string }) {
         const map = buildMap((data ?? []) as ProgressRow[]);
         progressRef.current = map;
         setProgress(map);
+        setProgressLoaded(true);
       });
 
     return () => {
       active = false;
     };
-  }, [supabase, userId]);
+  }, [supabase, userId, authLoading]);
+
+  const loading = authLoading || !progressLoaded;
 
   useEffect(() => {
     const timers = noteTimers.current;
@@ -184,7 +196,9 @@ export default function TopicTracker({ topic }: { topic: string }) {
         </p>
       )}
 
-      {items.length === 0 ? (
+      {loading ? (
+        <TopicSectionSkeleton />
+      ) : items.length === 0 ? (
         <p className="rounded-xl border border-dashed border-zinc-300 bg-white py-12 text-center text-sm text-zinc-500">
           No problems match your filters.
         </p>
@@ -206,6 +220,30 @@ export default function TopicTracker({ topic }: { topic: string }) {
       {showSignInPrompt && (
         <SignInPrompt onClose={() => setShowSignInPrompt(false)} />
       )}
+    </div>
+  );
+}
+
+function TopicSectionSkeleton() {
+  return (
+    <div
+      aria-hidden="true"
+      className="overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm"
+    >
+      <div className="flex items-center gap-3 px-4 py-3">
+        <div className="h-3.5 w-3.5 animate-pulse rounded bg-zinc-200" />
+        <div className="h-4 w-20 animate-pulse rounded bg-zinc-200" />
+        <div className="h-4 w-10 animate-pulse rounded-full bg-zinc-100" />
+        <div className="ml-auto h-2 w-24 animate-pulse rounded-full bg-zinc-100 sm:w-40" />
+      </div>
+      <ul className="divide-y divide-zinc-100 border-t border-zinc-100">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <li key={i} className="flex items-center gap-3 px-3 py-2.5">
+            <div className="h-5 w-5 flex-shrink-0 animate-pulse rounded-md bg-zinc-100" />
+            <div className="h-4 flex-1 animate-pulse rounded bg-zinc-100" />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
