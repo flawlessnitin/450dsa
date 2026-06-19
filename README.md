@@ -135,4 +135,8 @@ proxy.ts                # session refresh + route guard (Next 16 "middleware")
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) — free to use, modify, and self-host.
+
+## Author
+
+Developed by [Nitin Sahu](https://github.com/flawlessnitin).

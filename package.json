@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
+  "author": {
+    "name": "Nitin Sahu",
+    "url": "https://github.com/flawlessnitin"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
