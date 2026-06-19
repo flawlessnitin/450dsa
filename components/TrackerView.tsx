@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { problems, topics, topicCounts, totalCount } from "@/lib/catalog";
 import type { ProgressRow, StatusFilter } from "@/lib/types";
@@ -217,12 +218,20 @@ export default function TrackerView({
           <span className="text-base font-semibold tracking-tight text-zinc-900">
             Final <span className="text-indigo-600">450</span>
           </span>
-          <UserMenu
-            isGuest={isGuest}
-            userName={userName}
-            userEmail={userEmail}
-            avatarUrl={avatarUrl}
-          />
+          <div className="flex items-center gap-4">
+            <Link
+              href="/topics"
+              className="text-sm text-zinc-500 transition hover:text-indigo-600"
+            >
+              Browse Topics
+            </Link>
+            <UserMenu
+              isGuest={isGuest}
+              userName={userName}
+              userEmail={userEmail}
+              avatarUrl={avatarUrl}
+            />
+          </div>
         </div>
       </header>
 
