@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import SiteHeader from "@/components/SiteHeader";
 
 type Mode = "signin" | "signup";
 
@@ -68,129 +67,126 @@ export default function LoginPage() {
   }
 
   return (
-    <>
-      <SiteHeader />
-      <main className="flex flex-1 items-center justify-center px-4 py-12">
-        <div className="w-full max-w-4xl">
-          <div className="mb-8 text-center">
-            <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">
-              Final <span className="text-indigo-600">450</span>
-            </h1>
-            <p className="mt-1 text-sm text-zinc-500">
-              Track your DSA sheet progress.
-            </p>
+    <main className="flex flex-1 items-center justify-center px-4 py-12">
+      <div className="w-full max-w-sm">
+        <div className="mb-8 text-center">
+          <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">
+            Final <span className="text-indigo-600">450</span>
+          </h1>
+          <p className="mt-1 text-sm text-zinc-500">
+            Track your DSA sheet progress.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <div className="mb-5 grid grid-cols-2 gap-1 rounded-lg bg-zinc-100 p-1 text-sm font-medium">
+            {(["signin", "signup"] as const).map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => {
+                  setMode(m);
+                  setError(null);
+                  setMessage(null);
+                }}
+                className={`rounded-md py-1.5 transition ${
+                  mode === m
+                    ? "bg-white text-zinc-900 shadow-sm"
+                    : "text-zinc-500 hover:text-zinc-700"
+                }`}
+              >
+                {m === "signin" ? "Sign in" : "Create account"}
+              </button>
+            ))}
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <div className="mb-5 grid grid-cols-2 gap-1 rounded-lg bg-zinc-100 p-1 text-sm font-medium">
-              {(["signin", "signup"] as const).map((m) => (
-                <button
-                  key={m}
-                  type="button"
-                  onClick={() => {
-                    setMode(m);
-                    setError(null);
-                    setMessage(null);
-                  }}
-                  className={`rounded-md py-1.5 transition ${
-                    mode === m
-                      ? "bg-white text-zinc-900 shadow-sm"
-                      : "text-zinc-500 hover:text-zinc-700"
-                  }`}
-                >
-                  {m === "signin" ? "Sign in" : "Create account"}
-                </button>
-              ))}
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div>
+              <label className="mb-1 block text-xs font-medium text-zinc-600">
+                Email
+              </label>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div>
+              <label className="mb-1 block text-xs font-medium text-zinc-600">
+                Password
+              </label>
+              <input
+                type="password"
+                required
+                minLength={6}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete={mode === "signin" ? "current-password" : "new-password"}
+                className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                placeholder="••••••••"
+              />
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
-              <div>
-                <label className="mb-1 block text-xs font-medium text-zinc-600">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  autoComplete="email"
-                  className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs font-medium text-zinc-600">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  required
-                  minLength={6}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={mode === "signin" ? "current-password" : "new-password"}
-                  className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
-                  placeholder="••••••••"
-                />
-              </div>
-
-              {error && (
-                <p className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">
-                  {error}
-                </p>
-              )}
-              {message && (
-                <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs text-emerald-700">
-                  {message}
-                </p>
-              )}
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full rounded-lg bg-indigo-600 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                {loading
-                  ? "Please wait…"
-                  : mode === "signin"
-                    ? "Sign in"
-                    : "Create account"}
-              </button>
-            </form>
-
-            <div className="my-4 flex items-center gap-3 text-xs text-zinc-400">
-              <span className="h-px flex-1 bg-zinc-200" />
-              or
-              <span className="h-px flex-1 bg-zinc-200" />
-            </div>
+            {error && (
+              <p className="rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">
+                {error}
+              </p>
+            )}
+            {message && (
+              <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs text-emerald-700">
+                {message}
+              </p>
+            )}
 
             <button
-              type="button"
-              onClick={handleGoogle}
-              className="flex w-full items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50"
+              type="submit"
+              disabled={loading}
+              className="w-full rounded-lg bg-indigo-600 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <GoogleIcon />
-              Continue with Google
+              {loading
+                ? "Please wait…"
+                : mode === "signin"
+                  ? "Sign in"
+                  : "Create account"}
             </button>
+          </form>
 
-            <div className="mt-4 flex items-center justify-center gap-4 text-center">
-              <Link
-                href="/"
-                className="text-sm text-zinc-500 transition hover:text-indigo-600"
-              >
-                ← Back to problems
-              </Link>
-              <Link
-                href="/topics"
-                className="text-sm text-zinc-500 transition hover:text-indigo-600"
-              >
-                Browse the 450 DSA sheet
-              </Link>
-            </div>
+          <div className="my-4 flex items-center gap-3 text-xs text-zinc-400">
+            <span className="h-px flex-1 bg-zinc-200" />
+            or
+            <span className="h-px flex-1 bg-zinc-200" />
+          </div>
+
+          <button
+            type="button"
+            onClick={handleGoogle}
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-zinc-300 bg-white py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50"
+          >
+            <GoogleIcon />
+            Continue with Google
+          </button>
+
+          <div className="mt-4 flex items-center justify-center gap-4 text-center">
+            <Link
+              href="/"
+              className="text-sm text-zinc-500 transition hover:text-indigo-600"
+            >
+              ← Back to problems
+            </Link>
+            <Link
+              href="/topics"
+              className="text-sm text-zinc-500 transition hover:text-indigo-600"
+            >
+              Browse the 450 DSA sheet
+            </Link>
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
 
