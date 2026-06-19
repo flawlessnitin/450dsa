@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { problemsByTopic, topicCounts } from "@/lib/catalog";
 import type { ProgressRow, StatusFilter } from "@/lib/types";
+import { useAuth } from "./AuthProvider";
 import FilterBar from "./FilterBar";
 import TopicSection from "./TopicSection";
 import SignInPrompt from "./SignInPrompt";
@@ -28,8 +29,8 @@ function buildMap(rows: ProgressRow[]): ProgressMap {
 export default function TopicTracker({ topic }: { topic: string }) {
   const supabase = useMemo(() => createClient(), []);
   const topicProblems = useMemo(() => problemsByTopic(topic), [topic]);
+  const { userId } = useAuth();
 
-  const [userId, setUserId] = useState<string | null>(null);
   const [progress, setProgress] = useState<ProgressMap>({});
   const progressRef = useRef<ProgressMap>({});
 
@@ -41,27 +42,26 @@ export default function TopicTracker({ topic }: { topic: string }) {
 
   const noteTimers = useRef<Record<number, ReturnType<typeof setTimeout>>>({});
 
+  // Auth state (and its one-time fetch) lives in AuthProvider — this effect
+  // only fires the topic's own progress fetch once that resolves a real user.
   useEffect(() => {
+    if (!userId) return;
     let active = true;
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!active || !session?.user) return;
-      setUserId(session.user.id);
-      supabase
-        .from("progress")
-        .select("problem_id, done, starred, note")
-        .then(({ data }) => {
-          if (!active) return;
-          const map = buildMap((data ?? []) as ProgressRow[]);
-          progressRef.current = map;
-          setProgress(map);
-        });
-    });
+    supabase
+      .from("progress")
+      .select("problem_id, done, starred, note")
+      .then(({ data }) => {
+        if (!active) return;
+        const map = buildMap((data ?? []) as ProgressRow[]);
+        progressRef.current = map;
+        setProgress(map);
+      });
 
     return () => {
       active = false;
     };
-  }, [supabase]);
+  }, [supabase, userId]);
 
   useEffect(() => {
     const timers = noteTimers.current;
