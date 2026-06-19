@@ -130,3 +130,9 @@ supabase/schema.sql     # progress table + RLS
 supabase/profiles.sql   # profiles table + RLS + avatars bucket
 proxy.ts                # session refresh + route guard (Next 16 "middleware")
 ```
+
+---
+
+## License
+
+[MIT](LICENSE)
