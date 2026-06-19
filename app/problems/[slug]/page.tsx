@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
-import { problems, problemSlug, topicSlug } from "@/lib/catalog";
+import { problemById, problems, problemSlug, topicSlug } from "@/lib/catalog";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { baseUrl } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
@@ -16,7 +16,7 @@ function parseLeadingId(slug: string): number | null {
 function getProblemBySlug(slug: string) {
   const id = parseLeadingId(slug);
   if (id === null) return null;
-  return problems.find((p) => p.id === id) ?? null;
+  return problemById(id) ?? null;
 }
 
 export function generateStaticParams() {

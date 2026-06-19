@@ -119,9 +119,9 @@ components/
   Avatar.tsx            # photo or generated initials avatar
 lib/
   catalog.ts            # imports data/problems.json, derives topics/counts
-  slug.ts                # problem/topic slug helpers
-  seo.ts                 # JSON-LD (BreadcrumbList/ItemList) helpers
-  site.ts                # shared baseUrl
+  slug.ts               # problem/topic slug helpers
+  seo.ts                # JSON-LD (BreadcrumbList/ItemList) helpers
+  site.ts               # shared baseUrl
   types.ts              # shared types
   supabase/{client,server}.ts
 data/problems.json      # catalog (448 problems)
