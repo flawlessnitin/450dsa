@@ -72,7 +72,7 @@ export default async function PublicProfile({ params }: Params) {
     <>
       <SiteHeader />
       <main className="flex flex-1 items-start justify-center px-4 py-10">
-        <div className="w-full max-w-lg">
+        <div className="w-full max-w-4xl">
           <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
             <div className="flex items-start gap-4">
               <Avatar

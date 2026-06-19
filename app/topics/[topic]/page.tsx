@@ -64,7 +64,7 @@ export default async function TopicPage({ params }: Params) {
     <>
       <SiteHeader />
       <main className="flex flex-1 items-start justify-center px-4 py-10">
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-4xl">
           <nav className="mb-4 text-xs text-zinc-500">
             <Link href="/topics" className="hover:text-indigo-600">
               Topics

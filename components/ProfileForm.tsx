@@ -169,24 +169,11 @@ export default function ProfileForm({
     form.is_public && form.username ? `/u/${form.username.toLowerCase()}` : null;
 
   return (
-    <div className="flex flex-1 flex-col">
-      <header className="sticky top-0 z-10 border-b border-zinc-200 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
-          <Link
-            href="/"
-            className="flex items-center gap-1.5 text-sm text-zinc-500 transition hover:text-zinc-800"
-          >
-            <span aria-hidden>←</span> Home
-          </Link>
-          <span className="text-base font-semibold tracking-tight text-zinc-900">
-            Your profile
-          </span>
-          <span className="w-20" />
-        </div>
-      </header>
-
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-6">
-        <form onSubmit={handleSave} className="space-y-6">
+    <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6">
+      <h1 className="mb-6 text-xl font-semibold tracking-tight text-zinc-900">
+        Your profile
+      </h1>
+      <form onSubmit={handleSave} className="space-y-6">
           {/* Avatar */}
           <section className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
             <Avatar name={form.full_name} email={email} src={form.avatar_url} size={64} />
@@ -341,7 +328,6 @@ export default function ProfileForm({
           </div>
         </form>
       </main>
-    </div>
   );
 }
 

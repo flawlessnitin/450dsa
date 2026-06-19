@@ -71,7 +71,7 @@ export default function LoginPage() {
     <>
       <SiteHeader />
       <main className="flex flex-1 items-center justify-center px-4 py-12">
-        <div className="w-full max-w-sm">
+        <div className="w-full max-w-4xl">
           <div className="mb-8 text-center">
             <h1 className="text-2xl font-semibold tracking-tight text-zinc-900">
               Final <span className="text-indigo-600">450</span>

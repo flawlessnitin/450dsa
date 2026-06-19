@@ -27,7 +27,7 @@ export default function TopicsIndexPage() {
     <>
       <SiteHeader />
       <main className="flex flex-1 items-start justify-center px-4 py-10">
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-4xl">
           <h1 className="text-2xl font-semibold text-zinc-900">
             Final 450 DSA Sheet — Browse by Topic
           </h1>
